@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --orange: #fe4f2d;
+    --Orange: #fe4f2d;
     --dark-teal: #015551;
     --teal: #57b4ba;
     --cream: #fdfbee;
@@ -12,3 +12,23 @@
     --light-gray: #f5f7f8;
     --bright-orange: #FF3B15;
 }
+*{
+    font-family: Yekan Bakh FaNum;
+}
+@media (max-width: 767px) {
+    .mobile-nav {
+        height: 0;
+        transition: height 0.3s ease;
+    }
+    .mobile-nav.open {
+        height: 85vh;
+    }
+}
+@layer utilities {
+    .flex-center {
+      @apply flex justify-center items-center;
+    }
+    
+  }
+
+  

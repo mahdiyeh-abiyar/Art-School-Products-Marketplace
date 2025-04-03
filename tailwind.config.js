@@ -4,12 +4,12 @@
   theme: {
     extend: {
       colors: {
-        orange: "#FE4F2D",
+        Orange: "#FE4F2D",
         "dark-teal": "#015551",
         teal: "#57B4BA",
         cream: "#FDFBEE",
-        "gray-blue": "#9AA6B2",
-        "dark-gray": "#45474B",
+        grayblue: "#9AA6B2",
+        "darkgray": "#45474B",
         "light-gray": "#F5F7F8",
         "bright-orange": "#FF3B15",
       },

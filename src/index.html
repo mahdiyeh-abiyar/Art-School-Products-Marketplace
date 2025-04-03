@@ -4,9 +4,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/output.css">
+    <link rel="stylesheet" href="../public/fonts/fontiran.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>خانه</title>
 </head>
-<body>
+<body dir="rtl" >
     
+  <header class="fixed flex items-center justify-between p-4 md:p-8 border-b border-grayblue w-full z-[999] duration-300 bg-white">
+    <h2 class="text-darkgray font-semibold text-xl">فروشگاه هنرستان سعدی</h2>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex text-darkgray font-medium gap-6 md:gap-10">
+      <a href="#" class="hover:text-dark-teal transition">داستان ما</a>
+      <a href="#" class="hover:text-dark-teal transition">تماس با ما</a>
+      <a href="#" class="hover:text-dark-teal transition">سوالات متداول</a>
+      <a href="#" class="hover:text-dark-teal transition">شرایط و قوانین</a>
+    </nav>
+    
+    <!-- Desktop Buttons -->
+    <div class="hidden md:flex gap-2">
+      <a href="#" class="px-3 md:px-4 py-2 md:py-3 text-dark-teal border-2 border-dark-teal rounded-lg hover:bg-dark-teal hover:text-white transition">ورود</a>
+      <a href="#" class="px-4 md:px-6 py-2 md:py-3 text-white bg-Orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button id="menubar" class="cursor-pointer md:hidden text-2xl focus:outline-none" aria-label="منو">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+  
+  <!-- Backdrop for Mobile Menu -->
+  <div id="backdrop" class="fixed inset-0 w-full h-screen hidden bg-black/50 backdrop-blur-sm z-[997]"></div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-nav" class="md:hidden bg-dark-teal text-white flex flex-col items-center justify-center fixed w-full h-0 overflow-hidden bottom-0 duration-300 ease-in-out rounded-t-3xl left-0 z-[998]">
+    <ul class="flex flex-col items-center gap-8 py-8 w-full">
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">داستان ما</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">تماس با ما</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">سوالات متداول</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">شرایط و قوانین</a></li>
+    </ul>
+    <div class="flex gap-4 pb-8">
+      <a href="#" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
+      <a href="#" class="px-6 py-2 text-white bg-orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
+    </div>
+  </div>
+
+
+  <main class="pt-16  min-h-screen">
+    <section class="flex justify-center items-center py-10 md:py-20 px-4 sm:px-6 lg:px-8">
+      <div class="text-darkgray text-center max-w-4xl mx-auto">
+        <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl pb-6 md:pb-10">
+          فروشگاه هنرستان سمپاد سعدی!
+        </h1>
+        
+        <p class="text-base sm:text-lg md:text-xl leading-relaxed md:leading-loose">
+          اینجا جاییه که خلاقیت و مهارت هنرجویان سمپاد سعدی تبدیل به محصولات و خدمات
+          <span class="block sm:inline">حرفه‌ای می‌شه! با بیش از ۱۵۰ هنرجوی بااستعداد توی کامپیوتر، فتوگرافیک و گرافیک،</span>
+          <span class="block sm:inline">یه فرصت عالی برای خرید محصولات خاص یا همکاری با نسل جدید متخصص‌ها فراهم کردیم؛</span>
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-12 md:pt-20">
+          <a href="#" class="px-4 sm:px-6 md:px-8 lg:px-12 py-2 md:py-3 text-dark-teal border-2 border-dark-teal rounded-lg hover:bg-dark-teal hover:text-white transition text-sm sm:text-base md:text-lg">
+            داستان ما
+          </a>
+          <a href="#" class="px-4 sm:px-6 md:px-8 lg:px-16 py-2 md:py-3 text-white bg-Orange rounded-lg hover:bg-bright-orange transition text-sm sm:text-base md:text-lg hover:shadow-lg transform hover:-translate-y-1">
+            ثبت نام
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-6xl mx-auto"> 
+        <h2 class="text-2xl sm:text-3xl md:text-2xl font-semibold mb-8 md:mb-12 text-darkgray text-right w-full">
+          دسته‌بندی محصولات
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl">
+        <!-- Category Items - Extracted repeating classes -->
+        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
+          <img src="../public/images/Image Placeholder.svg" alt="طراحی دیجیتال" class="object-contain mb-4">
+          <h3 class="text-white text-lg md:text-xl font-medium mb-8">طراحی دیجیتال</h3>
+        </div>
+        
+        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
+          <img src="../public/images/Image Placeholder.svg" alt="نقاشی و تصویرسازی" class="object-contain mb-4">
+          <h3 class="text-white text-lg md:text-xl font-medium mb-8">نقاشی و تصویرسازی</h3>
+        </div>
+        
+        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
+          <img src="../public/images/Image Placeholder.svg" alt="محصولات چاپی" class="object-contain mb-4">
+          <h3 class="text-white text-lg md:text-xl font-medium mb-8">محصولات چاپی</h3>
+        </div>
+        
+        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
+          <img src="../public/images/Image Placeholder.svg" alt="طراحی وب سایت" class="object-contain mb-4">
+          <h3 class="text-white text-lg md:text-xl font-medium mb-8">طراحی وب سایت</h3>
+        </div>
+      </div>
+      
+      <a href="#" class="px-6 py-2 md:px-6 md:py-3 text-white bg-Orange rounded-lg hover:bg-bright-orange transition-all duration-300 text-sm md:text-base hover:shadow-lg transform hover:-translate-y-1 mt-10 md:mt-20">
+        مشاهده محصولات بیشتر
+      </a>
+    </section>
+    
+
+    <section class="mt-32 md:mt-40 flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-8">
+      <div class="w-full mb-8 md:mb-0 md:w-auto md:order-2">
+        <img src="../public/images/Image Placeholder.svg" alt="استعدادهای هنرستان سمپاد سعدی" class="w-full md:w-[400px]">
+      </div>
+    
+      <div class="w-full lg:w-1/2 md:order-1 text-right">
+        <p class="text-dark-teal font-semibold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 md:mb-8">
+          بهترین استعدادهای جوان،<br>
+          آماده‌ی خلق آثار منحصربه‌فرد برای شما؛
+        </p>
+        
+        <p class="text-darkgray text-base sm:text-lg md:text-xl leading-relaxed md:leading-loose mb-6 sm:mb-8 md:mb-10 w-full sm:w-5/6 md:w-4/5 mx-auto md:mx-0">
+          هنرستان سمپاد سعدی جاییه که هنرجویان مستعد، مهارت‌هاشون رو به نمایش می‌ذارن و آثارشون رو به فروش می‌رسونن. اگه دنبال یه محصول خاص، طراحی سفارشی یا همکاری با استعدادهای جدید هستی، اینجا بهترین فرصت برای توئه!
+        </p>
+        
+        <div class="mt-6 sm:mt-8 md:mt-10 flex justify-center md:justify-start">
+          <a href="#" class=" inline-block px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-3.5 text-white bg-Orange rounded-lg hover:bg-bright-orange transition-all duration-300 text-sm sm:text-base md:text-lg font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+            ثبت نام
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-24 max-w-7xl mx-auto">
+      <!-- بخش اطلاعات تماس -->
+      <div class="w-full lg:w-1/2 xl:w-[45%]">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8 lg:mb-10 text-darkgray">
+          تماس با ما
+        </h2>
+        
+        <p class="text-darkgray text-base md:text-lg leading-relaxed mb-8 md:mb-10">
+          اگه سوالی داری، به راهنمایی نیاز داری یا می‌خوای با ما در ارتباط باشی، از طریق راه‌های زیر می‌تونی با ما تماس بگیری؛
+        </p>
+        
+        <div class="space-y-4 sm:space-y-6 ">
+          <p class="text-darkgray flex items-center  lg:justify-start gap-3">
+            <i class="fa-regular fa-envelope text-teal text-lg md:text-xl"></i>
+            SampadSaediSchool@gmail.com
+          </p>
+          
+          <p class="text-darkgray flex items-center  lg:justify-start gap-3">
+            <i class="fa-solid fa-phone text-teal text-lg md:text-xl"></i>
+            051-33215418
+          </p>
+          
+          <p class="text-darkgray flex items-center lg:justify-start gap-3">
+            <i class="fa-solid fa-location-dot text-teal text-lg md:text-xl"></i>
+            مشهد، احمدآباد، بین کلاهدوز 4 و 6، هنرستان سمپاد سعدی
+          </p>
+        </div>
+      </div>
+      
+      <!-- فرم تماس -->
+      <div class="w-full lg:w-1/2  max-w-lg lg:max-w-none">
+        <form action="" class="border-2 border-dark-teal rounded-3xl p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6 shadow-md">
+          <div>
+            <input type="text" placeholder="نام و نام خانوادگی" 
+                   class="border-2 border-dark-teal rounded-lg w-full px-4 py-2 md:py-3 focus:ring-2 focus:ring-dark-teal focus:border-transparent transition">
+          </div>
+          
+          <div>
+            <input type="email" placeholder="آدرس ایمیل" 
+                   class="border-2 border-dark-teal rounded-lg w-full px-4 py-2 md:py-3 focus:ring-2 focus:ring-dark-teal focus:border-transparent transition">
+          </div>
+          
+          <div>
+            <input type="number" placeholder="شماره تماس" 
+                   class="border-2 border-dark-teal rounded-lg w-full px-4 py-2 md:py-3 focus:ring-2 focus:ring-dark-teal focus:border-transparent transition">
+          </div>
+          
+          <div>
+            <textarea placeholder="لطفا پیغام خود را اینجا بنویسید..." 
+                      class="border-2 border-dark-teal rounded-lg w-full px-4 py-3 h-32 md:h-40 focus:ring-2 focus:ring-dark-teal focus:border-transparent transition"></textarea>
+          </div>
+          
+          <button type="submit" 
+                  class="bg-dark-teal hover:bg-teal-700 text-white w-full py-3 md:py-4 rounded-lg transition-all duration-300 font-medium text-lg shadow-md hover:shadow-lg">
+            ارسال پیام
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="flex justify-center items-center flex-col md:mt-20 md:mb-20">
+      <!-- Header Section -->
+      <div class="mb-6 w-full sm:w-3/4 md:w-4/5 px-4">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8 lg:mb-10 text-darkgray">سوالات متداول</h1>
+          <p class="text-darkgray text-base md:text-lg mb-2 ">سوالی داری که اینجا پیدا نکردی؟</p>
+          <p class="text-darkgray text-base md:text-lg mb-10 "> نگران نباش! می‌تونی از طریق <span class="font-bold">فرم تماس با ما</span> سوالت رو بپرسی. ما در سریع‌ترین زمان ممکن پاسخ می‌دیم!</p>
+      </div>
+  
+      <!-- FAQ Section -->
+      <div class="space-y-4 w-full sm:w-3/4 md:w-4/5  px-4">
+          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
+              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq1')">
+                  <span class="text-sm sm:text-xl font-semibold text-grayblue">چه محصولاتی در فروشگاه ارائه میشه؟</span>
+                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+              </div>
+              <div id="faq1" class="hidden mt-4 text-sm text-white">
+                  <p>محصولات هنرجویان در دسته‌های مختلف مثل طراحی وبسایت، نقاشی، و محصولات چاپی ارائه میشه. هر محصول توسط هنرجویان با دقت و قابل سفارش هست.</p>
+              </div>
+          </div>
+  
+          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
+              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq2')">
+                  <span class="text-sm sm:text-xl font-semibold text-grayblue">چطور میتونم سفارشم رو ثبت کنم؟</span>
+                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+              </div>
+              <div id="faq2" class="hidden mt-4 text-sm text-white">
+                  <p>برای ثبت سفارش، شما می‌توانید از طریق سایت و با پر کردن فرم سفارش اقدام کنید و محصول خود را انتخاب و خرید کنید.</p>
+              </div>
+          </div>
+  
+          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
+              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq3')">
+                  <span class="text-sm sm:text-xl font-semibold text-grayblue">پرداخت‌ها چطور انجام میشه؟</span>
+                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+              </div>
+              <div id="faq3" class="hidden mt-4 text-sm text-white">
+                  <p>پرداخت‌ها از طریق درگاه‌های امن آنلاین انجام می‌شود و می‌توانید از کارت‌های بانکی خود برای پرداخت استفاده کنید.</p>
+              </div>
+          </div>
+  
+          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
+              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq4')">
+                  <span class="text-sm sm:text-xl font-semibold text-grayblue">چطور میتونم با هنرجویان برای انجام پروژه همکاری کنم؟</span>
+                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+              </div>
+              <div id="faq4" class="hidden mt-4 text-sm text-white">
+                  <p>برای همکاری با هنرجویان، می‌توانید از طریق فرم تماس و یا از طریق پروژه‌های خود درخواست همکاری کنید.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  </main>
+  <footer class="mt-24">
+    <div class="flex flex-col sm:flex-row items-center justify-between p-4 md:px-24 md:py-16 border-t border-[#D4D2E3] w-full bg-white">
+        <!-- Header Section -->
+        <h2 class="text-darkgray font-semibold text-sm sm:text-lg md:text-xl w-full sm:w-[250px] md:w-auto mb-4 sm:mb-0">فروشگاه هنرستان سعدی</h2>
+        
+        <!-- Navigation Section -->
+        <nav class="flex flex-col sm:flex-row text-darkgray font-medium gap-4 sm:gap-8 sm:justify-center w-full sm:w-auto mb-4 sm:mb-0 text-xs sm:text-base md:text-lg">
+            <a href="#" class="hover:text-dark-teal transition">داستان ما</a>
+            <a href="#" class="hover:text-dark-teal transition">تماس با ما</a>
+            <a href="#" class="hover:text-dark-teal transition">سوالات متداول</a>
+            <a href="#" class="hover:text-dark-teal transition">شرایط و قوانین</a>
+        </nav>
+
+        <!-- Buttons Section -->
+        <div class="flex gap-4 sm:gap-6 mt-4 sm:mt-0 justify-center sm:justify-start">
+            <a href="#" class="px-3 md:px-4 py-2 md:py-3 bg-dark-teal rounded-lg transition mb-2 sm:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="white" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+            </a>
+            <a href="#" class="px-3 md:px-4 py-2 md:py-3 bg-dark-teal rounded-lg transition mb-2 sm:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="white" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+            </a>
+            <a href="#" class="px-3 md:px-4 py-2 md:py-3 bg-dark-teal rounded-lg transition mb-2 sm:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="white" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+            </a>
+            <a href="#" class="px-3 md:px-4 py-2 md:py-3 bg-dark-teal rounded-lg transition mb-2 sm:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="white" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+          </a>
+        </div>
+    </div>
+
+    <!-- Footer Copyright Section -->
+    <div class="flex justify-center items-center">
+        <p class="text-center text-grayblue w-full sm:w-3/4 md:w-1/2 border-t border-[#D4D2E3] p-8 text-sm md:text-base">تمامی حقوق برای هنرستان سمپاد سعدی محفوظ است</p>
+    </div>
+</footer>
+
+
+
+    
+  <script src="js/script.js"></script>
 </body>
 </html>
