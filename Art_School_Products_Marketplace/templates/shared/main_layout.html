@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "home/styles/output.css" %} ">
+    <link rel="stylesheet" href="{% static "home/public/fonts/fontiran.css" %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body dir="rtl" >
+    <!-- header section start -->
+    {% include "shared/header.html" %}
+
+    <!-- content section start -->
+    {% block content %}{% endblock content %}
+
+    <!-- footer section start -->
+    {% include "shared/footer.html" %}
+
+   <!-- footer refrence section start -->
+   {% block footer_refrence %}{% endblock footer_refrence %}
+</body>
+
+</html>
