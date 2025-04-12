@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{% static "home/styles/output.css" %} ">
     <link rel="stylesheet" href="{% static "home/public/fonts/fontiran.css" %} ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% block head_ref %}
+    {% endblock head_ref %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body dir="rtl" >
