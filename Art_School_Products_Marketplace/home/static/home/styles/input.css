@@ -30,5 +30,11 @@
     }
     
   }
+::placeholder {
+    font-size: 0.65rem; 
+}
+input[type="radio"]:checked {
+    accent-color: var(--teal);
+}
 
   

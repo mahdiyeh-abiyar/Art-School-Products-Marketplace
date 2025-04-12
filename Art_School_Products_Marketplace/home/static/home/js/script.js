@@ -31,6 +31,7 @@ function toggleAccordion(id) {
   const section = document.getElementById(id);
   const parent = section.parentElement;
   const icon = parent.querySelector('.icon');
+  const question = parent.querySelector('.question');
   
   // اگر پاسخ مخفی است، آن را نشان بده و پس‌زمینه را به رنگ آبی تغییر بده
   if (section.classList.contains('hidden')) {
@@ -41,6 +42,9 @@ function toggleAccordion(id) {
       icon.classList.remove('bg-Orange');
       icon.classList.add('bg-white', 'rotate-90','text-orange');
       icon.innerHTML = '×';
+
+      question.classList.remove('text-grayblue');
+      question.classList.add('text-white');
   } else {
       // اگر پاسخ نمایش داده شده است، آن را مخفی کن و پس‌زمینه را به رنگ طوسی تغییر بده
       section.classList.add('hidden');
@@ -50,5 +54,8 @@ function toggleAccordion(id) {
       icon.classList.remove('bg-white', 'rotate-45','text-orange');
       icon.classList.add('bg-Orange');
       icon.innerHTML = '+';
+
+      question.classList.remove('text-white');
+      question.classList.add('text-grayblue');
   }
 }
