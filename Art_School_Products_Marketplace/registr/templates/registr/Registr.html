@@ -1,11 +1,13 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home/static/styles/output.css">
-    <link rel="stylesheet" href="../Art_School_Products_Marketplace/">
-    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'home/styles/output.css' %}">
+    <link rel="stylesheet" href="{% static 'home/public/fonts/fontiran.css' %}">
+    <title>فرم ثبت نام</title>
     
 </head>
 <body dir="rtl" class="flex justify-center items-center min-h-screen flex-col">
@@ -64,6 +66,6 @@
       </p>
     </form>
     
-    <script src="js/register.js"></script>
+    <script src=" {% static 'registr/register.js' %} "></script>
   </body>
 </html>

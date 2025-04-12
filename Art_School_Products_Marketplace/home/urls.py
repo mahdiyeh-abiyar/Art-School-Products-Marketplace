@@ -1,8 +1,9 @@
-from django.urls import path
-from .views import home_page
+from django.urls import path , include
+from .views import  Products_list
 
 
 app_name = 'home'
 urlpatterns = [
-    path('', home_page, name='home_page')
+    path('', Products_list, name='Products_list'),
+    # path('home/registr/', include('registr.urls')),
 ]

@@ -1,6 +1,6 @@
  /** @type {import('tailwindcss').Config} */
  export default {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./Art_School_Products_Marketplace/templates/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {

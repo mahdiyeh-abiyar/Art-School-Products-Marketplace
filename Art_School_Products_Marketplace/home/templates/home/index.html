@@ -32,30 +32,18 @@
           دسته‌بندی محصولات
         </h2>
       </div>
-      
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl">
-        <!-- Category Items - Extracted repeating classes -->
-        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-          <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی دیجیتال" class="object-contain mb-4">
-          <h3 class="text-white text-lg md:text-xl font-medium mb-8">طراحی دیجیتال</h3>
-        </div>
-        
-        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-          <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="نقاشی و تصویرسازی" class="object-contain mb-4">
-          <h3 class="text-white text-lg md:text-xl font-medium mb-8">نقاشی و تصویرسازی</h3>
-        </div>
-        
-        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-          <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="محصولات چاپی" class="object-contain mb-4">
-          <h3 class="text-white text-lg md:text-xl font-medium mb-8">محصولات چاپی</h3>
-        </div>
-        
-        <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-          <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی وب سایت" class="object-contain mb-4">
-          <h3 class="text-white text-lg md:text-xl font-medium mb-8">طراحی وب سایت</h3>
-        </div>
-      </div>
-      
+        {%  for product in products  %}
+            <!-- Category Items - Extracted repeating classes -->
+              <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
+                <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی دیجیتال" class="object-contain mb-4">
+                <h3 class="text-white text-lg md:text-xl font-medium mb-8">{{ product.title }}</h3>
+              </div>
+            
+        {%  endfor  %}
+      </div> 
+    
       <a href="#" class="px-6 py-2 md:px-6 md:py-3 text-white bg-Orange rounded-lg hover:bg-bright-orange transition-all duration-300 text-sm md:text-base hover:shadow-lg transform hover:-translate-y-1 mt-10 md:mt-20">
         مشاهده محصولات بیشتر
       </a>
