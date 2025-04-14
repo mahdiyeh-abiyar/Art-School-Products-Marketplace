@@ -13,7 +13,7 @@
     
     <!-- Desktop Buttons -->
     <div class="hidden md:flex gap-2">
-      <a href="#" class="px-3 md:px-4 py-2 md:py-3 text-dark-teal border-2 border-dark-teal rounded-lg hover:bg-dark-teal hover:text-white transition">ورود</a>
+      <a href="{% url "login:login_page" %}" class="px-3 md:px-4 py-2 md:py-3 text-dark-teal border-2 border-dark-teal rounded-lg hover:bg-dark-teal hover:text-white transition">ورود</a>
       <a href="{% url "registr:registr_page" %}" class="px-4 md:px-6 py-2 md:py-3 text-white bg-Orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
     </div>
     
@@ -35,7 +35,7 @@
       <li><a href="#" class="text-xl hover:text-orange-200 transition">شرایط و قوانین</a></li>
     </ul>
     <div class="flex gap-4 pb-8">
-      <a href="#" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
+      <a href="{% url "login:login_page" %}" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
       <a href="{% url "registr:registr_page" %}" class="px-6 py-2 text-white bg-orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
     </div>
   </div>

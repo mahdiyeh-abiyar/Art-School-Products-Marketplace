@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Products
+from products.models import Product
 
 
-def Products_list(request):
-    products = Products.objects.all()
+def home_page(request):
+    products = Product.objects.all()
     context = {
         'products': products
     }
