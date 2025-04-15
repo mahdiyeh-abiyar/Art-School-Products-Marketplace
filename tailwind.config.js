@@ -2,6 +2,15 @@
  export default {
   content: ['./templates/**/*.html',
     './**/templates/**/*.html'],
+    safelist: [
+      "bg-teal",
+      "bg-Orange",
+      "bg-white",
+      "text-white",
+      "text-grayblue",
+      "rotate-90",
+      "text-Orange"
+    ],
   theme: {
     extend: {
       colors: {

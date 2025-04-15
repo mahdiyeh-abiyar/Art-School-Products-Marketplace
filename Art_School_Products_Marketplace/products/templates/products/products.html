@@ -1,316 +1,624 @@
-<!DOCTYPE html>
-<html lang="fa-ir" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body style="font-family: Yekan Bakh FaNum;">
-    <!-- منو -->
-    <div class="flex space-x-5 text-[18px] sm:text-[px] xs:text-[10px] text-black p-2 whitespace-nowrap overflow-hidden">
-        <span class="mr-8 ml-5">دسته‌بندی کالاها</span>
-        <span class="text-[#9AA6B2]">|</span>
-        <span>طراحی دیجیتال</span>
-        <span class="text-[#9AA6B2]">|</span>
-        <span>نقاشی و تصویرسازی</span>
-        <span class="text-[#9AA6B2]">|</span>
-        <span>محصولات چاپی</span>
-        <span class="text-[#9AA6B2]">|</span>
-        <span>طراحی وب‌سایت</span>
-    </div>
+{% extends "shared/main_layout.html" %}
+{% load static %}
+{% block content %}
 
-
-    <!-- بخش کارت‌ها -->
-     <div class="px-6 py-8 sm:px-6 sm:py-8">
-
-        <!-- عنوان -->
-        <div class="mb-6 text-right">
-            <h2 class="text-xl sm:text-2xl font-bold text-black">طراحی دیجیتال</h2>
-          </div>
-
-
-        <!-- کارت ها -->
-
-        <div class="flex gap-6">
-
-            <!-- کارت محصول1 -->
-            <div class="relative h-[230px] w-[320px] bg-white rounded-xl border p-4 text-center shadow-sm">
-
-                
-          
-                <!-- برچسب -->
-                <div class="absolute top-3 right-3 bg-[#FE4F2D] text-white text-xs px-2 py-0.5 rounded-[4px]">جدید</div>
-
-                <!-- محتوای کارت -->
-
-                <div class="flex flex-col gap-3">
-                    <!-- آیکون علاقه‌مندی -->
-                    <div class="absolute top-3 left-3 text-gray-400 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-            
-                    <!-- تصویر -->
-                    <img src="../photo/sample.jpg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
-            
-                    <!-- عنوان -->
-                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
-            
-                    <!-- توضیح -->
-                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>
-            
-                    <!-- فضای خالی برای هماهنگ شدن ارتفاع -->
-                    <div class="flex-grow"></div>
-            
-                    <!-- دکمه‌ها -->
-                    <div class="flex justify-between items-center gap-6">
-                    
-            
-                    <!-- دکمه مشاهده -->
-                    <button class="flex-1 py-2 text-sm border border-[#57B4BA] bg-[#57B4BA] text-white rounded-lg hover:opacity-90">
-                        مشاهده
-                    </button>
-
-                    <!-- دکمه سبد خرید -->
-                    <button class="w-10 h-10 border border-[#57B4BA] text-[#57B4BA] rounded-md flex items-center justify-center hover:bg-[#f0fafa]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
-                        </svg>
-                    </button>
-                    </div>
-
-                
-
-                </div>
-            </div>
-
-            <!-- کارت محصول2 -->
-            <div class="relative h-[230px] w-[320px] bg-white rounded-xl border p-4 text-center shadow-sm">
-
-                
-          
-                <!-- برچسب -->
-                <div class="absolute top-3 right-3 bg-[#FE4F2D] text-white text-xs px-2 py-0.5 rounded-[4px]">جدید</div>
-
-                <!-- محتوای کارت -->
-
-                <div class="flex flex-col gap-3">
-                    <!-- آیکون علاقه‌مندی -->
-                    <div class="absolute top-3 left-3 text-gray-400 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-            
-                    <!-- تصویر -->
-                    <img src="../photo/sample.jpg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
-            
-                    <!-- عنوان -->
-                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
-            
-                    <!-- توضیح -->
-                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>
-            
-                    <!-- فضای خالی برای هماهنگ شدن ارتفاع -->
-                    <div class="flex-grow"></div>
-            
-                    <!-- دکمه‌ها -->
-                    <div class="flex justify-between items-center gap-6">
-                    
-            
-                    <!-- دکمه مشاهده -->
-                    <button class="flex-1 py-2 text-sm border border-[#57B4BA] bg-[#57B4BA] text-white rounded-lg hover:opacity-90">
-                        مشاهده
-                    </button>
-
-                    <!-- دکمه سبد خرید -->
-                    <button class="w-10 h-10 border border-[#57B4BA] text-[#57B4BA] rounded-md flex items-center justify-center hover:bg-[#f0fafa]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
-                        </svg>
-                    </button>
-                    </div>
-
-                
-
-                </div>
-            </div>
-
-            <!-- کارت محصول3 -->
-            <div class="relative h-[230px] w-[320px] bg-white rounded-xl border p-4 text-center shadow-sm">
-
-                
-          
-                <!-- برچسب -->
-                <div class="absolute top-3 right-3 bg-[#FE4F2D] text-white text-xs px-2 py-0.5 rounded-[4px]">جدید</div>
-
-                <!-- محتوای کارت -->
-
-                <div class="flex flex-col gap-3">
-                    <!-- آیکون علاقه‌مندی -->
-                    <div class="absolute top-3 left-3 text-gray-400 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-            
-                    <!-- تصویر -->
-                    <img src="../photo/sample.jpg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
-            
-                    <!-- عنوان -->
-                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
-            
-                    <!-- توضیح -->
-                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>
-            
-                    <!-- فضای خالی برای هماهنگ شدن ارتفاع -->
-                    <div class="flex-grow"></div>
-            
-                    <!-- دکمه‌ها -->
-                    <div class="flex justify-between items-center gap-6">
-                    
-            
-                    <!-- دکمه مشاهده -->
-                    <button class="flex-1 py-2 text-sm border border-[#57B4BA] bg-[#57B4BA] text-white rounded-lg hover:opacity-90">
-                        مشاهده
-                    </button>
-
-                    <!-- دکمه سبد خرید -->
-                    <button class="w-10 h-10 border border-[#57B4BA] text-[#57B4BA] rounded-md flex items-center justify-center hover:bg-[#f0fafa]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
-                        </svg>
-                    </button>
-                    </div>
-
-                
-
-                </div>
-            </div>
-
-            <!-- کارت محصول4 -->
-            <div class="relative h-[230px] w-[320px] bg-white rounded-xl border p-4 text-center shadow-sm">
-
-                
-          
-                <!-- برچسب -->
-                <div class="absolute top-3 right-3 bg-[#FE4F2D] text-white text-xs px-2 py-0.5 rounded-[4px]">جدید</div>
-
-                <!-- محتوای کارت -->
-
-                <div class="flex flex-col gap-3">
-                    <!-- آیکون علاقه‌مندی -->
-                    <div class="absolute top-3 left-3 text-gray-400 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-            
-                    <!-- تصویر -->
-                    <img src="../photo/sample.jpg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
-            
-                    <!-- عنوان -->
-                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
-            
-                    <!-- توضیح -->
-                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>
-            
-                    <!-- فضای خالی برای هماهنگ شدن ارتفاع -->
-                    <div class="flex-grow"></div>
-            
-                    <!-- دکمه‌ها -->
-                    <div class="flex justify-between items-center gap-6">
-                    
-            
-                    <!-- دکمه مشاهده -->
-                    <button class="flex-1 py-2 text-sm border border-[#57B4BA] bg-[#57B4BA] text-white rounded-lg hover:opacity-90">
-                        مشاهده
-                    </button>
-
-                    <!-- دکمه سبد خرید -->
-                    <button class="w-10 h-10 border border-[#57B4BA] text-[#57B4BA] rounded-md flex items-center justify-center hover:bg-[#f0fafa]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
-                        </svg>
-                    </button>
-                    </div>
-
-                
-
-                </div>
-            </div>
-
-            <!-- کارت محصول5 -->
-            <div class="relative h-[230px] w-[320px] bg-white rounded-xl border p-4 text-center shadow-sm">
-
-                
-          
-                <!-- برچسب -->
-                <div class="absolute top-3 right-3 bg-[#FE4F2D] text-white text-xs px-2 py-0.5 rounded-[4px]">جدید</div>
-
-                <!-- محتوای کارت -->
-
-                <div class="flex flex-col gap-3">
-                    <!-- آیکون علاقه‌مندی -->
-                    <div class="absolute top-3 left-3 text-gray-400 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-            
-                    <!-- تصویر -->
-                    <img src="../photo/sample.jpg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
-            
-                    <!-- عنوان -->
-                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
-            
-                    <!-- توضیح -->
-                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>
-            
-                    <!-- فضای خالی برای هماهنگ شدن ارتفاع -->
-                    <div class="flex-grow"></div>
-            
-                    <!-- دکمه‌ها -->
-                    <div class="flex justify-between items-center gap-6">
-                    
-            
-                    <!-- دکمه مشاهده -->
-                    <button class="flex-1 py-2 text-sm border border-[#57B4BA] bg-[#57B4BA] text-white rounded-lg hover:opacity-90">
-                        مشاهده
-                    </button>
-
-                    <!-- دکمه سبد خرید -->
-                    <button class="w-10 h-10 border border-[#57B4BA] text-[#57B4BA] rounded-md flex items-center justify-center hover:bg-[#f0fafa]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5H19m-12 0a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
-                        </svg>
-                    </button>
-                    </div>
-
-                
-
-                </div>
-            </div>
-
-        
-
-        </div>
-        
-
-
-     </div>
+<main class="pt-14 flex flex-col items-center justify-center">
+    <nav class="md:gap-x-2 mt-20 md:p-8 w-full duration-300 bg-white text-sm ">
+        <a href="#" class="px-4 py-8">دسته‌بندی کالا‌ها</a>
+        <span class="text-grayblue">|</span>
+        <a href="#digital" class="p-4">طراحی دیجیتال</a>
+        <span class="text-grayblue">|</span>
+        <a href="#paint" class="p-4">نقاشی و تصویرسازی</a>
+        <span class="text-grayblue">|</span>
+        <a href="#print" class="p-4">محصولات چاپی</a>
+        <span class="text-grayblue">|</span>
+        <a href="#web" class="p-4">طراحی وب سایت</a>
+    </nav>
     
-</body>
-</html>
+
+
+    <section class="bg-teal flex rounded-md w-5/6 md:mt-20 p-4 ">
+        <div class="w-1/3 flex flex-col items-center text-center">
+            <h3 class="text-white font-semibold text-lg">پیشنهاد <br>شگفت انگیز</h3>
+            <img src="../../static/home/public/images/01 Online Shopping 1.svg" alt="پیشنهاد شگفت انگیز" class="my-4 w-3/4" />
+            <div class="flex">
+                <a href="" class="text-sm text-white">مشاهده همه</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+        <div class="gap-2 w-11/12 flex">
+            <div class="relative  bg-white rounded-xl  p-4 text-center shadow-sm flex flex-col gap-3">
+                <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </button>
+                <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                <div class="flex justify-between items-center gap-6 mt-8">
+                    <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                    <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>                  
+                    </button>
+                </div>
+            </div>
+    
+            <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </button>
+                <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                <div class="flex justify-between items-center gap-6 mt-8">
+                    <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                    <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>                  
+                    </button>
+                </div>
+            </div>
+    
+            <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </button>
+                <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                <div class="flex justify-between items-center gap-6 mt-8">
+                    <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                    <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>                  
+                    </button>
+                </div>
+            </div>
+    
+            <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </button>
+                <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                <div class="flex justify-between items-center gap-6 mt-8">
+                    <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                    <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>                  
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex items-center justify-center min-h-screen">
+        <div class="flex items-center space-x-reverse space-x-20 top-2">
+            <img src="../../static/home/public/images/01 Online Shopping 3.svg" alt="mobile icon" class="">
+        
+            <div class="text-center">
+              <h1 class="text-3xl font-bold mb-12 w-full">آیا دنبال محصول خاصی می‌گردی؟</h1>
+              <div class="relative w-64 mx-auto flex justify-between">
+                <input type="text" placeholder="جستجوی محصول" class="w-full px-4 py-2  rounded-lg text-sm text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2  bg-[#F5F5F5]" />
+                <div class="absolute top-2 left-3 text-gray-400">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+        
+            <img src="../../static/home/public/images/01 Online Shopping 2.svg" alt="box icon" class="">
+          </div>
+    </section>
+
+    <section class="flex flex-col justify-center items-center w-full">
+        <div class="flex justify-between items-center w-[91%] p-4 mb-8">
+            <h1 class="font-bold text-2xl">طراحی دیجیتال</h1>
+            <div class="flex">
+                <a href="" class="text-sm">مشاهده همه</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+                
+        <div class="flex justify-center items-center">
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4  ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>  
+            </div>
+            <div class="gap-2 w-11/12 flex">
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+    </section>
+
+
+    <section class="flex flex-col justify-center items-center w-full mt-32">
+        <div class="flex justify-between items-center w-[91%] p-4 mb-8">
+            <h1 class="font-bold text-2xl"> نقاشی و تصویر سازی</h1>
+            <div class="flex">
+                <a href="" class="text-sm">مشاهده همه</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+                
+        <div class="flex justify-center items-center">
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4  ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>  
+            </div>
+            <div class="gap-2 w-11/12 flex">
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+    </section>
+
+
+    <section class="flex flex-col justify-center items-center w-full mt-32">
+        <div class="flex justify-between items-center w-[91%] p-4 mb-8">
+            <h1 class="font-bold text-2xl">محصولات چاپی</h1>
+            <div class="flex">
+                <a href="" class="text-sm">مشاهده همه</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+                
+        <div class="flex justify-center items-center">
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4  ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>  
+            </div>
+            <div class="gap-2 w-11/12 flex">
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+    </section>
+
+
+    <section class="flex flex-col justify-center items-center w-full mt-32">
+        <div class="flex justify-between items-center w-[91%] p-4 mb-8">
+            <h1 class="font-bold text-2xl"> طراحی وب سایت</h1>
+            <div class="flex">
+                <a href="" class="text-sm">مشاهده همه</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+                
+        <div class="flex justify-center items-center">
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4  ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>  
+            </div>
+            <div class="gap-2 w-11/12 flex">
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative  bg-white rounded-xl border p-4 text-center shadow-sm flex flex-col gap-3">
+                    <button class="absolute top-3 right-3 text-gray-400 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </button>
+                    <img src="../../static/home/public/images/Image Placeholder.svg" alt="محصول" class="mb-3 aspect-[1/1] w-full" />
+                    <h3 class="text-sm font-semibold mb-3">لورم ایپسوم</h3>
+                    <p class="text-xs text-[#1E1E1E] mt-1 mb-5">توضیح یک خطی در مورد محصول!</p>        
+                    <div class="flex justify-between items-center gap-6 mt-8">
+                        <button class="bg-teal  rounded-lg px-4  py-2 transition text-sm text-white w-1/2">مشاهده</button>
+                        <button class="text-teal border border-teal rounded-md  transition px-4  py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>                  
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center text-white w-8 h-8 bg-dark-teal rounded-full p-2 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </div>
+        </div>
+    </section>
+</main>
+
+
+    
+{% endblock content %}
+
+{% block title %}
+    محصولات
+{% endblock title %}

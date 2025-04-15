@@ -24,38 +24,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-/* ==========================================
-Faq Question
-========================================== */
 function toggleAccordion(id) {
   const section = document.getElementById(id);
   const parent = section.parentElement;
   const icon = parent.querySelector('.icon');
   const question = parent.querySelector('.question');
-  
+
   // اگر پاسخ مخفی است، آن را نشان بده و پس‌زمینه را به رنگ آبی تغییر بده
   if (section.classList.contains('hidden')) {
-      section.classList.remove('hidden');
-      parent.classList.add('bg-teal','text-white');
-      
-      // چرخاندن + به ضربدر و تغییر رنگ پس‌زمینه
-      icon.classList.remove('bg-Orange');
-      icon.classList.add('bg-white', 'rotate-90','text-orange');
-      icon.innerHTML = '×';
+    section.classList.remove('hidden');
+    
+    // حذف bg-light-gray قبلی
+    parent.classList.remove('bg-light-gray');
+    
+    // افزودن bg-teal-500 و text-white
+    parent.classList.add('bg-teal', 'text-white');
 
-      question.classList.remove('text-grayblue');
-      question.classList.add('text-white');
+    // چرخاندن + به ضربدر و تغییر رنگ پس‌زمینه
+    icon.classList.remove('bg-Orange');
+    icon.classList.add('bg-white', 'rotate-90', 'text-Orange');
+    icon.innerHTML = '×';
+
+    question.classList.remove('text-grayblue');
+    question.classList.add('text-white');
   } else {
-      // اگر پاسخ نمایش داده شده است، آن را مخفی کن و پس‌زمینه را به رنگ طوسی تغییر بده
-      section.classList.add('hidden');
-      parent.classList.remove('bg-teal','text-white');
-      
-      // بازگشت به حالت اولیه
-      icon.classList.remove('bg-white', 'rotate-45','text-orange');
-      icon.classList.add('bg-Orange');
-      icon.innerHTML = '+';
+    // اگر پاسخ نمایش داده شده است، آن را مخفی کن و پس‌زمینه را به رنگ طوسی تغییر بده
+    section.classList.add('hidden');
+    
+    // حذف bg-teal-500 و text-white
+    parent.classList.remove('bg-teal', 'text-white');
+    
+    // افزودن دوباره bg-light-gray
+    parent.classList.add('bg-light-gray');
 
-      question.classList.remove('text-white');
-      question.classList.add('text-grayblue');
+    // بازگشت به حالت اولیه آیکون
+    icon.classList.remove('bg-white', 'rotate-90', 'text-Orange');
+    icon.classList.add('bg-Orange');
+    icon.innerHTML = '+';
+
+    question.classList.remove('text-white');
+    question.classList.add('text-grayblue');
   }
 }

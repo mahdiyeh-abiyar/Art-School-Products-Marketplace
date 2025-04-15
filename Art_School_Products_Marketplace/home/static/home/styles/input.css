@@ -3,38 +3,41 @@
 @tailwind utilities;
 
 :root {
-    --Orange: #fe4f2d;
-    --dark-teal: #015551;
-    --teal: #57b4ba;
-    --cream: #fdfbee;
-    --gray-blue: #9aa6b2;
-    --dark-gray: #45474b;
-    --light-gray: #f5f7f8;
-    --bright-orange: #FF3B15;
-}
-*{
-    font-family: Yekan Bakh FaNum;
-}
-@media (max-width: 767px) {
-    .mobile-nav {
-        height: 0;
-        transition: height 0.3s ease;
-    }
-    .mobile-nav.open {
-        height: 85vh;
-    }
-}
-@layer utilities {
-    .flex-center {
-      @apply flex justify-center items-center;
-    }
-    
-  }
-::placeholder {
-    font-size: 0.65rem; 
-}
-input[type="radio"]:checked {
-    accent-color: var(--teal);
+  --Orange: #fe4f2d;
+  --dark-teal: #015551;
+  --teal: #57b4ba;
+  --cream: #fdfbee;
+  --gray-blue: #9aa6b2;
+  --dark-gray: #45474b;
+  --light-gray: #f5f7f8;
+  --bright-orange: #ff3b15;
 }
 
-  
+* {
+  font-family: Yekan Bakh FaNum;
+}
+
+@layer utilities {
+  .text-Orange {
+    color: #fe4f2d;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-nav {
+    height: 0;
+    transition: height 0.3s ease;
+  }
+
+  .mobile-nav.open {
+    height: 85vh;
+  }
+}
+
+::placeholder {
+  font-size: 0.65rem;
+}
+
+input[type="radio"]:checked {
+  accent-color: var(--teal);
+}

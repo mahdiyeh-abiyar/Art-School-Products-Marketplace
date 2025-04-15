@@ -37,7 +37,7 @@
         {%  for product in products  %}
             <!-- Category Items - Extracted repeating classes -->
               <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-                <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی دیجیتال" class="object-contain mb-4">
+                <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی دیجیتال" class="object-contain mb-4 w-full">
                 <h3 class="text-white text-lg md:text-xl font-medium mb-8">{{ product.title }}</h3>
               </div>
             
@@ -142,46 +142,50 @@
   
       <!-- FAQ Section -->
       <div class="space-y-4 w-full sm:w-3/4 md:w-4/5  px-4">
-          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
-              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq1')">
-                  <span class="question text-sm sm:text-xl font-semibold text-grayblue">چه محصولاتی در فروشگاه ارائه میشه؟</span>
-                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
-              </div>
-              <div id="faq1" class="hidden mt-4 text-sm text-white">
-                  <p>محصولات هنرجویان در دسته‌های مختلف مثل طراحی وبسایت، نقاشی، و محصولات چاپی ارائه میشه. هر محصول توسط هنرجویان با دقت و قابل سفارش هست.</p>
-              </div>
-          </div>
-  
-          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
-              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq2')">
-                  <span class="question text-sm sm:text-xl font-semibold text-grayblue">چطور میتونم سفارشم رو ثبت کنم؟</span>
-                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
-              </div>
-              <div id="faq2" class="hidden mt-4 text-sm text-white">
-                  <p>برای ثبت سفارش، شما می‌توانید از طریق سایت و با پر کردن فرم سفارش اقدام کنید و محصول خود را انتخاب و خرید کنید.</p>
-              </div>
-          </div>
-  
-          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
-              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq3')">
-                  <span class="question text-sm sm:text-xl font-semibold text-grayblue">پرداخت‌ها چطور انجام میشه؟</span>
-                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
-              </div>
-              <div id="faq3" class="hidden mt-4 text-sm text-white">
-                  <p>پرداخت‌ها از طریق درگاه‌های امن آنلاین انجام می‌شود و می‌توانید از کارت‌های بانکی خود برای پرداخت استفاده کنید.</p>
-              </div>
-          </div>
-  
-          <div class="bg-light-gray p-6 sm:p-8 rounded-lg">
-              <div class="flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq4')">
-                  <span class="question text-sm sm:text-xl font-semibold text-grayblue">چطور میتونم با هنرجویان برای انجام پروژه همکاری کنم؟</span>
-                  <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
-              </div>
-              <div id="faq4" class="hidden mt-4 text-sm text-white">
-                  <p>برای همکاری با هنرجویان، می‌توانید از طریق فرم تماس و یا از طریق پروژه‌های خود درخواست همکاری کنید.</p>
-              </div>
-          </div>
+        <div class="hidden">
+          bg-teal-500 text-white rotate-90 bg-light-gray text-grayblue bg-Orange text-orange-500
+        </div>
+        <div class="faq-container bg-light-gray p-6 sm:p-8 rounded-lg">
+            <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq1')">
+                <span class="question text-xs sm:text-xl font-semibold text-grayblue">چه محصولاتی در فروشگاه ارائه میشه؟</span>
+                <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+            </div>
+            <div id="faq1" class="faq-answer hidden mt-4 text-xs md:text-sm text-white">
+                <p>محصولات هنرجویان در دسته‌های مختلف مثل طراحی وبسایت، نقاشی، و محصولات چاپی ارائه میشه. هر محصول توسط هنرجویان با دقت و قابل سفارش هست.</p>
+            </div>
+        </div>
+
+        <div class="faq-container bg-light-gray p-6 sm:p-8 rounded-lg">
+            <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq2')">
+                <span class="question text-xs sm:text-xl font-semibold text-grayblue">چطور میتونم سفارشم رو ثبت کنم؟</span>
+                <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+            </div>
+            <div id="faq2" class="faq-answer hidden mt-4 text-xs md:text-sm text-white">
+                <p>برای ثبت سفارش، شما می‌توانید از طریق سایت و با پر کردن فرم سفارش اقدام کنید و محصول خود را انتخاب و خرید کنید.</p>
+            </div>
+        </div>
+
+        <div class="faq-container bg-light-gray p-6 sm:p-8 rounded-lg">
+            <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq3')">
+                <span class="question text-xs sm:text-xl font-semibold text-grayblue">پرداخت‌ها چطور انجام میشه؟</span>
+                <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+            </div>
+            <div id="faq3" class="faq-answer hidden mt-4 text-xs md:text-sm text-white">
+                <p>پرداخت‌ها از طریق درگاه‌های امن آنلاین انجام می‌شود و می‌توانید از کارت‌های بانکی خود برای پرداخت استفاده کنید.</p>
+            </div>
+        </div>
+
+        <div class="faq-container bg-light-gray p-6 sm:p-8 rounded-lg">
+            <div class="faq-toggle flex justify-between items-center cursor-pointer" onclick="toggleAccordion('faq4')">
+                <span class="question text-xs sm:text-xl font-semibold text-grayblue w-5/6">چطور میتونم با هنرجویان برای انجام پروژه همکاری کنم؟</span>
+                <span class="icon bg-Orange text-white rounded-full w-6 h-6 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-4xl transition-all">+</span>
+            </div>
+            <div id="faq4" class="faq-answer hidden mt-4 text-xs md:text-sm text-white">
+                <p>برای همکاری با هنرجویان، می‌توانید از طریق فرم تماس و یا از طریق پروژه‌های خود درخواست همکاری کنید.</p>
+            </div>
+        </div>
       </div>
+
   </section>
   </main>
 
