@@ -1,0 +1,60 @@
+{% extends "shared/main_layout.html" %}
+{% load static %}
+{% block content %}     
+
+    <div class="flex space-x-5 text-[18px] sm:text-[px] xs:text-[10px] text-black p-2 whitespace-nowrap overflow-hidden mt-12">
+      <span class="mr-8 ml-5">دسته‌بندی کالاها</span>
+      <span class="text-[#9AA6B2]">|</span>
+      <span>طراحی دیجیتال</span>
+      <span class="text-[#9AA6B2]">|</span>
+      <span>نقاشی و تصویرسازی</span>
+      <span class="text-[#9AA6B2]">|</span>
+      <span>محصولات چاپی</span>
+      <span class="text-[#9AA6B2]">|</span>
+      <span>طراحی وب‌سایت</span>
+    </div>
+    
+    <!-- نمایش محصول -->
+    <main class="max-w-6xl mx-auto px-4 mt-32 md:mt-[150px] "> 
+      <div class="flex flex-col md:flex-row gap-12 items-start"> 
+        
+        <!-- ستون راست: تصویر و تصاویر کوچک -->
+        <div class="flex flex-col items-center md:items-end md:w-1/2">
+          <!-- تصویر اصلی -->
+          <div class="relative border rounded-md p-6 shadow-sm">
+            <span class="absolute top-0 right-0 text-3xl p-2 text-gray-400">
+              <i class="fa-regular fa-heart"></i>
+            </span>
+            
+            <img src="./public/images/a.svg" alt="product" class="w-[300px] md:w-[400px] object-contain rounded p-4" />
+          </div>
+        
+          <!-- تصاویر کوچک -->
+          <div class="flex gap-4 mt-6">
+            <img src="./public/images/b.svg" class="p-2 border border-gray-400 rounded-md cursor-pointer hover:ring-2 ring-blue-500" style="border-width: 0.5px;" />
+            <img src="./public/images/b.svg" class="p-2 border border-gray-400 rounded-md cursor-pointer hover:ring-2 ring-blue-500" style="border-width: 0.5px;" />
+            <img src="./public/images/b.svg" class="p-2 border border-gray-400 rounded-md cursor-pointer hover:ring-2 ring-blue-500" style="border-width: 0.5px;" />
+            <img src="./public/images/b.svg" class="p-2 border border-gray-400 rounded-md cursor-pointer hover:ring-2 ring-blue-500" style="border-width: 0.5px;" />
+          </div>
+        </div>
+        
+    
+        <!-- ستون چپ: توضیحات -->
+        <div class="md:w-1/2 text-right space-y-2 pr-2 md:pr-4 mt-6"> 
+          <p class="text-sm font-semibold text-dark-teal">نقاشی و تصویرسازی</p>
+        
+          <div class="mt-4">
+            <p class="text-base font-semibold text-darkgray leading-relaxed">
+              توضیح یک خطی در مورد محصول؛
+            </p>
+          </div>
+          <hr class="border-t border-gray-300 mt-4  w-1/2 mx-auto" />
+        </div>
+                         
+      </div>
+    </main>
+
+{% endblock content  %}
+{% block title %}
+  نمایش محصول
+{% endblock title %}
