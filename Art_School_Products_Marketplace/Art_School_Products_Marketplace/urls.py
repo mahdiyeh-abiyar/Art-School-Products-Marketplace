@@ -11,6 +11,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('products/', include('products.urls')),
     path('products_detail/', include('products_detail.urls')),
+    path('product_cards/', include('productCard.urls')),
 ]
 
 if (settings.DEBUG):
