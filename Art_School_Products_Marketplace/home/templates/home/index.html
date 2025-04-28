@@ -37,7 +37,7 @@
         {%  for product in products  %}
             <!-- Category Items - Extracted repeating classes -->
               <div class="bg-dark-teal p-4 rounded-md flex flex-col items-center text-center hover:scale-105 transition-transform">
-                <img src="{% static "home/public/images/Image Placeholder.svg" %}" alt="طراحی دیجیتال" class="object-contain mb-4 w-full">
+                <img src="{{product.image.url }}" alt="{{ product.title }}" class="object-contain mb-4 w-full">
                 <h3 class="text-white text-lg md:text-xl font-medium mb-8">{{ product.title }}</h3>
               </div>
             

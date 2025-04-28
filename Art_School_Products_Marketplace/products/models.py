@@ -12,6 +12,7 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField(null=True , blank=True)
     category = models.ForeignKey(category, on_delete=models.CASCADE ,null=True , blank=True)
+    is_show = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title   
