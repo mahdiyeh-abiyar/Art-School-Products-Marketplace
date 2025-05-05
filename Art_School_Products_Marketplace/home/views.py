@@ -3,7 +3,7 @@ from products.models import Product
 
 
 def home_page(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(is_show=True)[:4]
     context = {
         'products': products
     }
