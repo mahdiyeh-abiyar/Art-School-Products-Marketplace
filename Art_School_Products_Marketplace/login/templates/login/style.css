@@ -1,0 +1,6 @@
+@font-face {
+     font-family: 'Yekan Bakh FaNum Regular WOFF'; src: url('fonts/woff/YekanBakhFaNum-Regular.woff');
+}
+body{
+    font-family: "Yekan Bakh FaNum Regular WOFF"; 
+}
