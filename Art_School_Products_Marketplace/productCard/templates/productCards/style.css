@@ -1,3 +1,9 @@
+    @font-face {
+     font-family: 'Yekan Bakh FaNum Regular WOFF'; src: url('./fonts/fonts/woff/YekanBakhFaNum-Regular.woff');
+    }
+    body{
+     font-family: "Yekan Bakh FaNum Regular WOFF"; 
+    }
     .bg-dark-teal {
       background-color: #57B4BA;
     }
