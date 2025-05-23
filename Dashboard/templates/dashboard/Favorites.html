@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../../../home/static/home/styles/output.css" rel="stylesheet">
+  <title>فروشگاه هنرستان سعدی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="h-full">
+<!-- Header -->
+<header class=" flex items-center justify-between p-4 md:p-8 border-b border-grayblue w-full z-[999] duration-300 bg-white">
+  <a href="{% url "home:home_page" %}"><h2 class="text-darkgray font-semibold text-xl">فروشگاه هنرستان سعدی</h2></a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex text-darkgray font-medium gap-6 md:gap-10">
+      <a href="{% url "about:about_page" %}" class="hover:text-dark-teal transition">داستان ما</a>
+      <a href="#" class="hover:text-dark-teal transition">تماس با ما</a>
+      <a href="#" class="hover:text-dark-teal transition">سوالات متداول</a>
+      <a href="#" class="hover:text-dark-teal transition">شرایط و قوانین</a>
+    </nav>
+    
+    <!-- Desktop Buttons -->
+    <div class="hidden md:flex gap-2">
+      <a ></a>
+      <a > </a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button id="menubar" class="cursor-pointer md:hidden text-2xl focus:outline-none" aria-label="منو">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+  
+  <!-- Backdrop for Mobile Menu -->
+  <div id="backdrop" class="fixed inset-0 w-full h-screen hidden bg-black/50 backdrop-blur-sm z-[997]"></div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-nav" class="md:hidden bg-dark-teal text-white flex flex-col items-center justify-center fixed w-full h-0 overflow-hidden bottom-0 duration-300 ease-in-out rounded-t-3xl left-0 z-[998]">
+    <ul class="flex flex-col items-center gap-8 py-8 w-full">
+      <li><a href="{% url "about:about_page" %}" class="text-xl hover:text-orange-200 transition">داستان ما</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">تماس با ما</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">سوالات متداول</a></li>
+      <li><a href="#" class="text-xl hover:text-orange-200 transition">شرایط و قوانین</a></li>
+    </ul>
+    
+  </div>
+
+
+
+<!--Sidebar -->
+<div class="relative min-h-screen flex">
+  <aside id="sidebar" class="top-[64px] min-h-screen w-12 bg-white border-l-2 border-gray-300 flex flex-col items-start py-4 transition-all duration-300 z-20">
+    
+    <div class="space-y-4 flex flex-col items-start w-full px-2 sidebar-btn">
+      <button id="menu-toggle" class="menu-btn bg-light-gray text-dark-teal p-2 rounded-full flex items-center justify-center w-10 h-10 transition-all duration-300">
+        <svg id="menu-icon" class="w-8 h-8 transition-all duration-300"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path d="M3.33643 5.75952H16.6633M3.33643 9.99991H16.6633M3.33643 14.2403H16.6633" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">   
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.33643 5.15373C3.33643 4.67175 3.52789 4.20951 3.8687 3.8687C4.20951 3.52789 4.67175 3.33643 5.15373 3.33643H6.97104C7.45302 3.33643 7.91526 3.52789 8.25607 3.8687C8.59688 4.20951 8.78835 4.67175 8.78835 5.15373V6.97104C8.78835 7.45302 8.59688 7.91526 8.25607 8.25607C7.91526 8.59688 7.45302 8.78835 6.97104 8.78835H5.15373C4.67175 8.78835 4.20951 8.59688 3.8687 8.25607C3.52789 7.91526 3.33643 7.45302 3.33643 6.97104V5.15373ZM3.33643 13.0287C3.33643 12.5468 3.52789 12.0845 3.8687 11.7437C4.20951 11.4029 4.67175 11.2114 5.15373 11.2114H6.97104C7.45302 11.2114 7.91526 11.4029 8.25607 11.7437C8.59688 12.0845 8.78835 12.5468 8.78835 13.0287V14.846C8.78835 15.328 8.59688 15.7903 8.25607 16.1311C7.91526 16.4719 7.45302 16.6633 6.97104 16.6633H5.15373C4.67175 16.6633 4.20951 16.4719 3.8687 16.1311C3.52789 15.7903 3.33643 15.328 3.33643 14.846V13.0287ZM11.2114 5.15373C11.2114 4.67175 11.4029 4.20951 11.7437 3.8687C12.0845 3.52789 12.5468 3.33643 13.0287 3.33643H14.846C15.328 3.33643 15.7903 3.52789 16.1311 3.8687C16.4719 4.20951 16.6633 4.67175 16.6633 5.15373V6.97104C16.6633 7.45302 16.4719 7.91526 16.1311 8.25607C15.7903 8.59688 15.328 8.78835 14.846 8.78835H13.0287C12.5468 8.78835 12.0845 8.59688 11.7437 8.25607C11.4029 7.91526 11.2114 7.45302 11.2114 6.97104V5.15373ZM11.2114 13.0287C11.2114 12.5468 11.4029 12.0845 11.7437 11.7437C12.0845 11.4029 12.5468 11.2114 13.0287 11.2114H14.846C15.328 11.2114 15.7903 11.4029 16.1311 11.7437C16.4719 12.0845 16.6633 12.5468 16.6633 13.0287V14.846C16.6633 15.328 16.4719 15.7903 16.1311 16.1311C15.7903 16.4719 15.328 16.6633 14.846 16.6633H13.0287C12.5468 16.6633 12.0845 16.4719 11.7437 16.1311C11.4029 15.7903 11.2114 15.328 11.2114 14.846V13.0287Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="../dashboard/Dashboard.html">
+        <span class="label hidden text-lg text-gray-700">صفحه اصلی</span>
+      </a>
+    </div>
+    
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.0286 5.15385C13.0286 5.95715 12.7095 6.72754 12.1415 7.29556C11.5735 7.86358 10.8031 8.18269 9.99976 8.18269C9.19646 8.18269 8.42606 7.86358 7.85804 7.29556C7.29002 6.72754 6.97091 5.95715 6.97091 5.15385C6.97091 4.35055 7.29002 3.58015 7.85804 3.01213C8.42606 2.44411 9.19646 2.125 9.99976 2.125C10.8031 2.125 11.5735 2.44411 12.1415 3.01213C12.7095 3.58015 13.0286 4.35055 13.0286 5.15385ZM3.94287 16.5568C3.96883 14.9676 4.61837 13.4522 5.75144 12.3375C6.8845 11.2228 8.41029 10.5981 9.99976 10.5981C11.5892 10.5981 13.115 11.2228 14.2481 12.3375C15.3811 13.4522 16.0307 14.9676 16.0566 16.5568C14.1565 17.4282 12.0902 17.8778 9.99976 17.875C7.83837 17.875 5.78683 17.4033 3.94287 16.5568Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="../dashboard/user-dashboard.html">
+        <span class="label hidden text-lg text-gray-700">حساب کاربری</span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.0287 8.78846V5.15385C13.0287 4.35055 12.7095 3.58015 12.1415 3.01213C11.5735 2.44411 10.8031 2.125 9.99981 2.125C9.19651 2.125 8.42611 2.44411 7.85809 3.01213C7.29007 3.58015 6.97096 4.35055 6.97096 5.15385V8.78846M16.1431 7.17873L17.1632 16.871C17.2198 17.4082 16.7998 17.875 16.2594 17.875H3.74019C3.61275 17.8751 3.4867 17.8485 3.37023 17.7967C3.25376 17.745 3.14949 17.6693 3.06417 17.5746C2.97886 17.4799 2.91442 17.3683 2.87504 17.2471C2.83565 17.1259 2.82221 16.9978 2.83558 16.871L3.8565 7.17873C3.88005 6.95545 3.98543 6.7488 4.15232 6.59861C4.31921 6.44843 4.53579 6.36534 4.76031 6.36538H15.2393C15.7045 6.36538 16.0947 6.71673 16.1431 7.17873ZM7.27385 8.78846C7.27385 8.86879 7.24194 8.94583 7.18514 9.00263C7.12833 9.05944 7.05129 9.09135 6.97096 9.09135C6.89063 9.09135 6.81359 9.05944 6.75679 9.00263C6.69999 8.94583 6.66808 8.86879 6.66808 8.78846C6.66808 8.70813 6.69999 8.63109 6.75679 8.57429C6.81359 8.51749 6.89063 8.48558 6.97096 8.48558C7.05129 8.48558 7.12833 8.51749 7.18514 8.57429C7.24194 8.63109 7.27385 8.70813 7.27385 8.78846ZM13.3315 8.78846C13.3315 8.86879 13.2996 8.94583 13.2428 9.00263C13.186 9.05944 13.109 9.09135 13.0287 9.09135C12.9483 9.09135 12.8713 9.05944 12.8145 9.00263C12.7577 8.94583 12.7258 8.86879 12.7258 8.78846C12.7258 8.70813 12.7577 8.63109 12.8145 8.57429C12.8713 8.51749 12.9483 8.48558 13.0287 8.48558C13.109 8.48558 13.186 8.51749 13.2428 8.57429C13.2996 8.63109 13.3315 8.70813 13.3315 8.78846Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="../dashboard/order.html">
+        <span class="label hidden text-lg text-gray-700"> سفارشات</span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-dark-teal p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.2689 4.97104C16.2689 2.96393 14.5736 1.33643 12.4825 1.33643C10.9196 1.33643 9.5772 2.24589 8.9997 3.54385C8.4222 2.24589 7.07981 1.33643 5.51612 1.33643C3.42662 1.33643 1.73047 2.96393 1.73047 4.97104C1.73047 10.8026 8.9997 14.6633 8.9997 14.6633C8.9997 14.6633 16.2689 10.8026 16.2689 4.97104Z" stroke="#F5F7F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="../dashboard/Favorites.html">
+        <span class="label hidden text-lg text-gray-700">علاقه‌مندی‌ها</span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.73047 1.73047V2.94201M1.73047 2.94201L3.96778 2.38228C5.65133 1.96151 7.42987 2.15689 8.98193 2.93312L9.06916 2.97674C10.5899 3.73702 12.329 3.94023 13.984 3.55101L16.4959 2.95978C16.1905 5.77826 16.1919 8.62155 16.4999 11.4397L13.9848 12.031C12.3296 12.4206 10.5902 12.2177 9.06916 11.4575L8.98193 11.4139C7.42987 10.6377 5.65133 10.4423 3.96778 10.863L1.73047 11.4228M1.73047 2.94201V11.4228M1.73047 16.2689V11.4228" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="../../../home/templates/home/index.html#contact-us">
+        <span class="label hidden text-lg text-gray-700">پشتیبانی</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-start w-full px-2 mt-auto space-y-4 bottom-buttons">
+      
+    <div class="flex items-center gap-2">
+  <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+    <!-- آیکون SVG -->
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.0288 7.57662V4.54778C13.0288 4.0658 12.8374 3.60356 12.4966 3.26275C12.1558 2.92193 11.6935 2.73047 11.2115 2.73047H6.36538C5.8834 2.73047 5.42117 2.92193 5.08035 3.26275C4.73954 3.60356 4.54808 4.0658 4.54808 4.54778V15.4516C4.54808 15.9336 4.73954 16.3958 5.08035 16.7367C5.42117 17.0775 5.8834 17.2689 6.36538 17.2689H11.2115C11.6935 17.2689 12.1558 17.0775 12.4966 16.7367C12.8374 16.3958 13.0288 15.9336 13.0288 15.4516V12.4228M15.4519 12.4228L17.875 9.9997M17.875 9.9997L15.4519 7.57662M17.875 9.9997H7.57692" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <a href="" id="logout-link">
+    <span class="label hidden text-lg text-gray-700">خروج از حساب</span>
+  </a>
+
+<!-- کادر alert سفارشی -->
+<div id="custom-alert" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden ">
+  <div class="relative bg-white rounded-xl shadow-lg p-6 " style="width: 40%;">
+
+    <!-- دکمه بستن -->
+    <button id="close-alert" class="absolute top-3 left-4 text-gray-500 hover:text-gray-700 text-3xl">
+      &times;
+    </button>
+
+    <!-- عنوان و توضیح -->
+    <div class="mb-4 flex justify-between items-center">
+      <h2 class="text-xl font-semibold text-gray-800 ml-16">از حساب کاربری خارج می‌شوید؟!</h2>
+    </div>
+      <hr>
+    <p class="text-gray-600 mb-6 mt-6">با خروج از حساب کاربری، به سبد خرید فعلی‌تان دسترسی نخواهید داشت. هروقت بخواهید می‌توانید مجددا وارد شوید و خریدتان را ادامه دهید.</p>
+
+    <!-- دکمه‌ها -->
+<div style="text-align: left;">
+  <button id="cancel-btn" class="border-2 px-4 py-2 rounded-lg text-Orange font-semibold" style="border-color: #FE4F2D;">انصراف</button>
+  <button id="confirm-logout-btn" class="px-4 py-2 rounded-lg font-semibold bg-Orange text-white">خروج از حساب</button>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+</div>
+
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.3077 13.1044C11.8126 12.9262 13.2912 12.5711 14.7129 12.0463C13.5089 10.7127 12.8436 8.9791 12.8463 7.18239V6.57662C12.8463 5.29134 12.3357 4.0587 11.4269 3.14987C10.518 2.24104 9.28541 1.73047 8.00013 1.73047C6.71485 1.73047 5.48221 2.24104 4.57338 3.14987C3.66455 4.0587 3.15398 5.29134 3.15398 6.57662V7.18239C3.15641 8.97921 2.49085 10.7128 1.28659 12.0463C2.68632 12.5632 4.16198 12.9227 5.69255 13.1044M10.3077 13.1044C8.7747 13.2862 7.22557 13.2862 5.69255 13.1044M10.3077 13.1044C10.4241 13.4677 10.453 13.8534 10.3922 14.2301C10.3313 14.6067 10.1824 14.9637 9.95748 15.2719C9.73257 15.5801 9.43807 15.8308 9.09794 16.0037C8.75781 16.1766 8.38167 16.2667 8.00013 16.2667C7.6186 16.2667 7.24245 16.1766 6.90232 16.0037C6.56219 15.8308 6.26769 15.5801 6.04279 15.2719C5.81788 14.9637 5.66894 14.6067 5.60808 14.2301C5.54722 13.8534 5.57616 13.4677 5.69255 13.1044M0.831055 5.36508C1.0588 4.01217 1.66604 2.75175 2.58213 1.73047M13.4181 1.73047C14.3342 2.75175 14.9415 4.01217 15.1692 5.36508" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="#">
+        <span class="label hidden text-lg text-gray-700">اعلان‌ها</span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.0286 5.15385C13.0286 5.95715 12.7095 6.72754 12.1415 7.29556C11.5735 7.86358 10.8031 8.18269 9.99976 8.18269C9.19646 8.18269 8.42606 7.86358 7.85804 7.29556C7.29002 6.72754 6.97091 5.95715 6.97091 5.15385C6.97091 4.35055 7.29002 3.58015 7.85804 3.01213C8.42606 2.44411 9.19646 2.125 9.99976 2.125C10.8031 2.125 11.5735 2.44411 12.1415 3.01213C12.7095 3.58015 13.0286 4.35055 13.0286 5.15385ZM3.94287 16.5568C3.96883 14.9676 4.61837 13.4522 5.75144 12.3375C6.8845 11.2228 8.41029 10.5981 9.99976 10.5981C11.5892 10.5981 13.115 11.2228 14.2481 12.3375C15.3811 13.4522 16.0307 14.9676 16.0566 16.5568C14.1565 17.4282 12.0902 17.8778 9.99976 17.875C7.83837 17.875 5.78683 17.4033 3.94287 16.5568Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a href="#">
+        <span class="label hidden text-lg text-gray-700">حدیث حافظ</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+
+
+</div>
+<script src="../../static/dashboard/js/script.js">
+</script>
+</body>
+</html>
