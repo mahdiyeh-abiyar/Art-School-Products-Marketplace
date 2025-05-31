@@ -1,0 +1,186 @@
+<section class="p-3">
+    <div class="rounded-lg mt-10 mb-10 mx-auto border border-gray-400 p-4 w-full max-w-[700px] md:p-6">
+
+    <!-- بخش متن توضیح -->
+    <p class="text-gray-700 font-normal text-xs md:text-sm leading-6">سلام! خوشحالیم که میزبان شما در فروشگاه هنرستان سعدی هستیم. لطفا قبل از انجام ادامه رویه‌ی ثبت سفارش،
+        <a href="" class="text-teal">شرایط و قوانین</a>
+        رو مطالعه کنین.</p>
+    <p class="text-gray-700 font-normal text-xs md:text-sm leading-6">
+        درصورتی که هنوز هم درمورد رویه‌ی سفارش سوالی دارین،
+        <a href="" class="text-teal">با ما تماس بگیرین</a>.
+    </p>
+
+    <!-- بخش زدن تیک -->
+    <label class="flex items-center mt-6 text-xs text-gray-700 cursor-pointer select-none">
+        <input type="checkbox" class=" h-3 w-3 checked:bg-[#57B4BA] checked:border-[#57B4BA]	focus:ring-[#57B4BA] border-gray-300 rounded-md ml-2 cursor-pointer">
+        شرایط و قوانین رو مطالعه کردم و آن را تائید می‌کنم
+    </label>
+
+    <!-- خط -->
+    <div class="h-px bg-gray-400 mt-10 w-[98%] mx-auto"></div>
+
+
+    <!-- بخش اطلاعات -->
+    <p class="mt-7 text-center text-base font-medium text-[#45474B]">برای ادامه و تکمیل سفارش، لطفا اطلاعات خودتون رو به صورت کامل وارد کنین:</p>
+
+    <!-- فرم سفارش -->
+        <section class="flex-1 mt-10">
+        <div class="max-w-3xl mx-auto">
+
+            <!-- کارت اطلاعات کاربر -->
+            <div class=" mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- نام -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">نام
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="حدیث" class="focus:border-gray-400 
+                    w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm " />
+                </div>
+                
+                <!-- نام خانوادگی -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">نام خانوادگی
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="حافظ" class="w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+                <!-- شماره تلفن -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">شماره تلفن
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="09154444444" class="w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+                <!-- ایمیل -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">ایمیل
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="example@gmail.com" class="w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+                <!--توضیحات -->
+                <div class="md:col-span-2">
+                <label class="block text-sm font-medium text-[#45474B] mb-1">توضیحات
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <textarea type="text" placeholder="توضیحات سفارش ..." class="w-full h-[100px] resize-none p-3 leading-5 rounded-md border bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm"></textarea>
+                </div>
+                
+            </div>
+            </div>
+
+            
+        </div>
+
+        <!-- بخش روش تحویل -->
+        <div class="flex flex-col gap-3 md:gap-4 text-[#45474B] md:flex-row md:items-center">
+            <p class="text-lg font-medium">روش تحویل</p>
+
+            <div class="flex items-center gap-1">
+            <div class="md:w-3 md:h-3 h-2 w-2 flex items-center justify-center rounded-full border border-red-600 text-red-600 text-xs md:text-sm font-bold">
+                ?
+            </div>
+            <p class="md:text-xs text-[9px] text-gray-600">
+                درصورتی که ساکن مشهد نیستید، روش غیرحضوری را انتخاب نمایید.
+            </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2 text-xs md:text-sm text-gray-700 mt-5">
+            <label class="flex items-center gap-2">
+            <input type="radio" name="delivery" value="non-inperson" class="text-[#57B4BA] focus:ring-[#57B4BA]"/>
+            غیرحضوری (پست مشهد)
+            </label>
+            
+            <label class="flex items-center gap-2">
+            <input type="radio" name="delivery" value="inperson" class="text-[#57B4BA] focus:ring-[#57B4BA]" checked />
+            حضوری (مشهد، بین کلاهدوز ۴ و ۶)
+            </label>
+        </div>
+
+
+        <div class="mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- استان -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">استان
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="خراسان رضوی" class="focus:border-gray-400 
+                    w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+                <!-- شهر-->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">شهر
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="مشهد" class="w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+                <!--آدرس -->
+                <div class="md:col-span-2">
+                <label class="block text-sm font-medium text-[#45474B] mb-1">آدرس
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <textarea type="text" placeholder="آدرس خود را به طور کامل وارد نمایید..." class="w-full h-[100px] resize-none p-3 leading-5 rounded-md border bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm"></textarea>
+                </div>
+
+                <!-- کدپستی -->
+                <div>
+                <label class="block text-sm font-medium text-[#45474B] mb-1">کد پستی 
+                    <span class="text-red-500 text-lg">*</span>
+                </label>
+                <input type="text" readonly value="2343278472" class="w-full p-3 rounded-md border  text-[#9AA6B2] bg-[#F2F4F8] shadow-sm shadow-[#C1C7CD] text-sm" />
+                </div>
+                
+            </div>
+            </div>
+
+        </section>
+
+        <!-- بخش سفارشات -->
+        <div class="mt-10">
+        <p class="text-lg font-medium text-[#45474B] mb-8">سفارشات شما</p>
+
+
+        <!-- محصول 1 -->
+        <div class="flex items-center gap-6 leading-5 ">
+            <img src="../photo/1.png" alt="sample" class="w-28 sm:w-auto">
+            <div class="sm:space-y-6 space-y-3">
+            <p class="text-base md:text-lg font-semibold text-[#45474B]">لورم ایپسوم</p>
+            <p class="text-xs font-semibold text-[#45474B]">توضیح یک خطی در مورد محصول؛</p>
+            <p class="text-xs font-semibold text-[#015551]">قیمت: توافقی</p>
+            <p class="text-xs font-semibold text-[#45474B]">تعداد در سبد: 1</p>
+            </div>
+        </div>
+
+        <div class="h-px bg-gray-400 mt-7 mb-7 w-[98%] mx-auto"></div>
+
+        <!-- محصول2 -->
+        <div class="flex items-center gap-6 md:leading-5">
+            <img src="../photo/1.png" alt="sample" class="w-28 sm:w-auto">
+            <div class="sm:space-y-6 space-y-3">
+            <p class="text-base md:text-lg font-semibold text-[#45474B]">لورم ایپسوم</p>
+            <p class="text-xs font-semibold text-[#45474B]">توضیح یک خطی در مورد محصول؛</p>
+            <p class="text-xs font-semibold text-[#015551]">قیمت: توافقی</p>
+            <p class="text-xs font-semibold text-[#45474B]">تعداد در سبد: 1</p>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- دکمه ثبت نهایی -->
+        <div class="flex justify-end">
+        <input type="button" value="تایید و ثبت نهایی" class="text-xs md:text-base p-2 w-auto bg-[#FE4F2D] rounded-md pr-3 pl-3 md:pr-6 md:pl-6 text-white font-normal  mt-7 hover:cursor-pointer">
+        </div>
+    
+    </div>
+</section>
