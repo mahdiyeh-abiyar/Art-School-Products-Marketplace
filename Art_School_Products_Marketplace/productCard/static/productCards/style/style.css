@@ -1,3 +1,18 @@
-.heart-red {
-    color: #e11d48 !important;
-}
+@font-face {
+     font-family: 'Yekan Bakh FaNum Regular WOFF'; src: url('./fonts/fonts/woff/YekanBakhFaNum-Regular.woff');
+    }
+    body{
+     font-family: "Yekan Bakh FaNum Regular WOFF"; 
+    }
+    .bg-dark-teal {
+      background-color: #57B4BA;
+    }
+    .text-teal {
+      color: #57B4BA;
+    }
+    .bg-teal {
+      background-color: #57B4BA;
+    }
+    .border-teal {
+      border-color: #57B4BA;
+    }
