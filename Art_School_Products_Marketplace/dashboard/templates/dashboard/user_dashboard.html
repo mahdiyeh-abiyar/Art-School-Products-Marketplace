@@ -1,54 +1,7 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../../../home/static/home/styles/output.css" rel="stylesheet">
-  <title>فروشگاه هنرستان سعدی</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
-</head>
+{% extends "shared/main_layout.html" %} 
+{% load static %}
 
-
-<body class="h-full">
-<!-- Header -->
-<header class=" flex items-center justify-between p-4 md:p-8 border-b border-grayblue w-full z-[999] duration-300 bg-white">
-  <a href="{% url "home:home_page" %}"><h2 class="text-darkgray font-semibold text-xl">فروشگاه هنرستان سعدی</h2></a>
-    
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex text-darkgray font-medium gap-6 md:gap-10">
-      <a href="{% url "about:about_page" %}" class="hover:text-dark-teal transition">داستان ما</a>
-      <a href="#" class="hover:text-dark-teal transition">تماس با ما</a>
-      <a href="#" class="hover:text-dark-teal transition">سوالات متداول</a>
-      <a href="#" class="hover:text-dark-teal transition">شرایط و قوانین</a>
-    </nav>
-    
-    <!-- Desktop Buttons -->
-    <div class="hidden md:flex gap-2">
-      <a ></a>
-      <a > </a>
-    </div>
-    
-    <!-- Mobile Menu Button -->
-    <button id="menubar" class="cursor-pointer md:hidden text-2xl focus:outline-none" aria-label="منو">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-</header>
-  
-  <!-- Backdrop for Mobile Menu -->
-  <div id="backdrop" class="fixed inset-0 w-full h-screen hidden bg-black/50 backdrop-blur-sm z-[997]"></div>
-  
-  <!-- Mobile Navigation Menu -->
-  <div id="mobile-nav" class="md:hidden bg-dark-teal text-white flex flex-col items-center justify-center fixed w-full h-0 overflow-hidden bottom-0 duration-300 ease-in-out rounded-t-3xl left-0 z-[998]">
-    <ul class="flex flex-col items-center gap-8 py-8 w-full">
-      <li><a href="{% url "about:about_page" %}" class="text-xl hover:text-orange-200 transition">داستان ما</a></li>
-      <li><a href="#" class="text-xl hover:text-orange-200 transition">تماس با ما</a></li>
-      <li><a href="#" class="text-xl hover:text-orange-200 transition">سوالات متداول</a></li>
-      <li><a href="#" class="text-xl hover:text-orange-200 transition">شرایط و قوانین</a></li>
-    </ul>
-    
-  </div>
-
-
+{% block content %}
 
 <!--Sidebar -->
 <div class="relative min-h-screen flex">
@@ -68,30 +21,30 @@
         <path d="M3.33643 5.15373C3.33643 4.67175 3.52789 4.20951 3.8687 3.8687C4.20951 3.52789 4.67175 3.33643 5.15373 3.33643H6.97104C7.45302 3.33643 7.91526 3.52789 8.25607 3.8687C8.59688 4.20951 8.78835 4.67175 8.78835 5.15373V6.97104C8.78835 7.45302 8.59688 7.91526 8.25607 8.25607C7.91526 8.59688 7.45302 8.78835 6.97104 8.78835H5.15373C4.67175 8.78835 4.20951 8.59688 3.8687 8.25607C3.52789 7.91526 3.33643 7.45302 3.33643 6.97104V5.15373ZM3.33643 13.0287C3.33643 12.5468 3.52789 12.0845 3.8687 11.7437C4.20951 11.4029 4.67175 11.2114 5.15373 11.2114H6.97104C7.45302 11.2114 7.91526 11.4029 8.25607 11.7437C8.59688 12.0845 8.78835 12.5468 8.78835 13.0287V14.846C8.78835 15.328 8.59688 15.7903 8.25607 16.1311C7.91526 16.4719 7.45302 16.6633 6.97104 16.6633H5.15373C4.67175 16.6633 4.20951 16.4719 3.8687 16.1311C3.52789 15.7903 3.33643 15.328 3.33643 14.846V13.0287ZM11.2114 5.15373C11.2114 4.67175 11.4029 4.20951 11.7437 3.8687C12.0845 3.52789 12.5468 3.33643 13.0287 3.33643H14.846C15.328 3.33643 15.7903 3.52789 16.1311 3.8687C16.4719 4.20951 16.6633 4.67175 16.6633 5.15373V6.97104C16.6633 7.45302 16.4719 7.91526 16.1311 8.25607C15.7903 8.59688 15.328 8.78835 14.846 8.78835H13.0287C12.5468 8.78835 12.0845 8.59688 11.7437 8.25607C11.4029 7.91526 11.2114 7.45302 11.2114 6.97104V5.15373ZM11.2114 13.0287C11.2114 12.5468 11.4029 12.0845 11.7437 11.7437C12.0845 11.4029 12.5468 11.2114 13.0287 11.2114H14.846C15.328 11.2114 15.7903 11.4029 16.1311 11.7437C16.4719 12.0845 16.6633 12.5468 16.6633 13.0287V14.846C16.6633 15.328 16.4719 15.7903 16.1311 16.1311C15.7903 16.4719 15.328 16.6633 14.846 16.6633H13.0287C12.5468 16.6633 12.0845 16.4719 11.7437 16.1311C11.4029 15.7903 11.2114 15.328 11.2114 14.846V13.0287Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="../dashboard/Dashboard.html">
+      <a href="{% url "dashboard:dashboard_page" %}">
         <span class="label hidden text-lg text-gray-700">صفحه اصلی</span>
       </a>
     </div>
     
 
     <div class="flex items-center gap-2">
-      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
+      <button id="menu-toggle" class="menu-btn bg-dark-teal p-3 rounded-full flex justify-center items-center w-10 h-10">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.0286 5.15385C13.0286 5.95715 12.7095 6.72754 12.1415 7.29556C11.5735 7.86358 10.8031 8.18269 9.99976 8.18269C9.19646 8.18269 8.42606 7.86358 7.85804 7.29556C7.29002 6.72754 6.97091 5.95715 6.97091 5.15385C6.97091 4.35055 7.29002 3.58015 7.85804 3.01213C8.42606 2.44411 9.19646 2.125 9.99976 2.125C10.8031 2.125 11.5735 2.44411 12.1415 3.01213C12.7095 3.58015 13.0286 4.35055 13.0286 5.15385ZM3.94287 16.5568C3.96883 14.9676 4.61837 13.4522 5.75144 12.3375C6.8845 11.2228 8.41029 10.5981 9.99976 10.5981C11.5892 10.5981 13.115 11.2228 14.2481 12.3375C15.3811 13.4522 16.0307 14.9676 16.0566 16.5568C14.1565 17.4282 12.0902 17.8778 9.99976 17.875C7.83837 17.875 5.78683 17.4033 3.94287 16.5568Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.0286 5.15385C13.0286 5.95715 12.7095 6.72754 12.1415 7.29556C11.5735 7.86358 10.8031 8.18269 9.99976 8.18269C9.19646 8.18269 8.42606 7.86358 7.85804 7.29556C7.29002 6.72754 6.97091 5.95715 6.97091 5.15385C6.97091 4.35055 7.29002 3.58015 7.85804 3.01213C8.42606 2.44411 9.19646 2.125 9.99976 2.125C10.8031 2.125 11.5735 2.44411 12.1415 3.01213C12.7095 3.58015 13.0286 4.35055 13.0286 5.15385ZM3.94287 16.5568C3.96883 14.9676 4.61837 13.4522 5.75144 12.3375C6.8845 11.2228 8.41029 10.5981 9.99976 10.5981C11.5892 10.5981 13.115 11.2228 14.2481 12.3375C15.3811 13.4522 16.0307 14.9676 16.0566 16.5568C14.1565 17.4282 12.0902 17.8778 9.99976 17.875C7.83837 17.875 5.78683 17.4033 3.94287 16.5568Z" stroke="#F5F7F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="../dashboard/user-dashboard.html">
+      <a href="{% url "dashboard:user_dashboard" %}">
         <span class="label hidden text-lg text-gray-700">حساب کاربری</span>
       </a>
     </div>
 
     <div class="flex items-center gap-2">
-      <button id="menu-toggle" class="menu-btn bg-dark-teal p-3 rounded-full flex justify-center items-center w-10 h-10">
+      <button id="menu-toggle" class="menu-btn bg-light-gray p-3 rounded-full flex justify-center items-center w-10 h-10">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.0287 8.78846V5.15385C13.0287 4.35055 12.7095 3.58015 12.1415 3.01213C11.5735 2.44411 10.8031 2.125 9.99981 2.125C9.19651 2.125 8.42611 2.44411 7.85809 3.01213C7.29007 3.58015 6.97096 4.35055 6.97096 5.15385V8.78846M16.1431 7.17873L17.1632 16.871C17.2198 17.4082 16.7998 17.875 16.2594 17.875H3.74019C3.61275 17.8751 3.4867 17.8485 3.37023 17.7967C3.25376 17.745 3.14949 17.6693 3.06417 17.5746C2.97886 17.4799 2.91442 17.3683 2.87504 17.2471C2.83565 17.1259 2.82221 16.9978 2.83558 16.871L3.8565 7.17873C3.88005 6.95545 3.98543 6.7488 4.15232 6.59861C4.31921 6.44843 4.53579 6.36534 4.76031 6.36538H15.2393C15.7045 6.36538 16.0947 6.71673 16.1431 7.17873ZM7.27385 8.78846C7.27385 8.86879 7.24194 8.94583 7.18514 9.00263C7.12833 9.05944 7.05129 9.09135 6.97096 9.09135C6.89063 9.09135 6.81359 9.05944 6.75679 9.00263C6.69999 8.94583 6.66808 8.86879 6.66808 8.78846C6.66808 8.70813 6.69999 8.63109 6.75679 8.57429C6.81359 8.51749 6.89063 8.48558 6.97096 8.48558C7.05129 8.48558 7.12833 8.51749 7.18514 8.57429C7.24194 8.63109 7.27385 8.70813 7.27385 8.78846ZM13.3315 8.78846C13.3315 8.86879 13.2996 8.94583 13.2428 9.00263C13.186 9.05944 13.109 9.09135 13.0287 9.09135C12.9483 9.09135 12.8713 9.05944 12.8145 9.00263C12.7577 8.94583 12.7258 8.86879 12.7258 8.78846C12.7258 8.70813 12.7577 8.63109 12.8145 8.57429C12.8713 8.51749 12.9483 8.48558 13.0287 8.48558C13.109 8.48558 13.186 8.51749 13.2428 8.57429C13.2996 8.63109 13.3315 8.70813 13.3315 8.78846Z" stroke="#F5F7F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.0287 8.78846V5.15385C13.0287 4.35055 12.7095 3.58015 12.1415 3.01213C11.5735 2.44411 10.8031 2.125 9.99981 2.125C9.19651 2.125 8.42611 2.44411 7.85809 3.01213C7.29007 3.58015 6.97096 4.35055 6.97096 5.15385V8.78846M16.1431 7.17873L17.1632 16.871C17.2198 17.4082 16.7998 17.875 16.2594 17.875H3.74019C3.61275 17.8751 3.4867 17.8485 3.37023 17.7967C3.25376 17.745 3.14949 17.6693 3.06417 17.5746C2.97886 17.4799 2.91442 17.3683 2.87504 17.2471C2.83565 17.1259 2.82221 16.9978 2.83558 16.871L3.8565 7.17873C3.88005 6.95545 3.98543 6.7488 4.15232 6.59861C4.31921 6.44843 4.53579 6.36534 4.76031 6.36538H15.2393C15.7045 6.36538 16.0947 6.71673 16.1431 7.17873ZM7.27385 8.78846C7.27385 8.86879 7.24194 8.94583 7.18514 9.00263C7.12833 9.05944 7.05129 9.09135 6.97096 9.09135C6.89063 9.09135 6.81359 9.05944 6.75679 9.00263C6.69999 8.94583 6.66808 8.86879 6.66808 8.78846C6.66808 8.70813 6.69999 8.63109 6.75679 8.57429C6.81359 8.51749 6.89063 8.48558 6.97096 8.48558C7.05129 8.48558 7.12833 8.51749 7.18514 8.57429C7.24194 8.63109 7.27385 8.70813 7.27385 8.78846ZM13.3315 8.78846C13.3315 8.86879 13.2996 8.94583 13.2428 9.00263C13.186 9.05944 13.109 9.09135 13.0287 9.09135C12.9483 9.09135 12.8713 9.05944 12.8145 9.00263C12.7577 8.94583 12.7258 8.86879 12.7258 8.78846C12.7258 8.70813 12.7577 8.63109 12.8145 8.57429C12.8713 8.51749 12.9483 8.48558 13.0287 8.48558C13.109 8.48558 13.186 8.51749 13.2428 8.57429C13.2996 8.63109 13.3315 8.70813 13.3315 8.78846Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="../dashboard/order.html">
+      <a href="{% url "dashboard:order_page" %}">
         <span class="label hidden text-lg text-gray-700"> سفارشات</span>
       </a>
     </div>
@@ -102,7 +55,7 @@
         <path d="M16.2689 4.97104C16.2689 2.96393 14.5736 1.33643 12.4825 1.33643C10.9196 1.33643 9.5772 2.24589 8.9997 3.54385C8.4222 2.24589 7.07981 1.33643 5.51612 1.33643C3.42662 1.33643 1.73047 2.96393 1.73047 4.97104C1.73047 10.8026 8.9997 14.6633 8.9997 14.6633C8.9997 14.6633 16.2689 10.8026 16.2689 4.97104Z" stroke="#015551" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a href="../dashboard/Favorites.html">
+      <a href="{% url "dashboard:Favorites_page" %}">
         <span class="label hidden text-lg text-gray-700">علاقه‌مندی‌ها</span>
       </a>
     </div>
@@ -194,68 +147,90 @@
 
 <!--main-content-->
 <main id="main-content" class="w-full max-w-7xl px-4 pt-20 mt-10 pb-16 overflow-auto transition-all duration-300 p-4 flex-shrink-0 flex-grow-0 mx-auto">
-
-<div class="w-[50%] mx-auto border-2 border-gray-700 rounded-lg mb-10" dir="rtl" style="padding-right: 3%;" >
-
-  <!-- عنوان -->
-  <div class="flex justify-end items-center mx- mb-6 mt-10 ">
-    <div class="flex items-center gap-2 text-gray-800">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-           xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 6V12H16.5M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
-              stroke="#45474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <h1 class="text-xl ">تاریخچه سفارشات</h1>
+  <div class="w-full lg:w-96 mx-auto bg-white p-3 rounded-lg text-sm text-gray-700 mb-12 border border-gray-400 ">
+  
+ <!-- ردیف ۱ -->
+<div class="flex flex-col lg:flex-row  lg:border-b-0 border-gray-300">
+  <!-- ستون راست -->
+  <div class="w-full lg:w-1/2 p-4 border-b lg:border-b-0 border-gray-300">
+    <div class="text-gray-500 text-lg mb-1">نام:</div>
+    <div class="flex items-center justify-between">
+      <input type="text" value="حدیث" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
     </div>
   </div>
 
-  <!-- تب‌ها -->
-  <div class="flex justify-start mb-2 text-gray-600 gap-12">
-    <button onclick="showTab('current')" id="tab-current"
-            class="tab-button pb-2 text-orange-500 border-orange-500 font-bold">
-      جاری
-    </button>
-    <button onclick="showTab('delivered')" id="tab-delivered"
-            class="tab-button pb-2 text-gray-600 hover:text-orange-500 font-bold">
-      تحویل شده
-    </button>
-    <button onclick="showTab('cancelled')" id="tab-cancelled"
-            class="tab-button pb-2 text-gray-600 hover:text-orange-500 font-bold">
-      لغو شده
-    </button>
-  </div>
-  <hr class="pl-6 mb-6 h-6">
-  <!-- محتوای تب‌ها -->
-  <div id="current" class="tab-content items-center " style="width: 200px;">
-    <div class="flex flex-col">
-      <div class="bg-white border p-4 rounded-lg ml-auto" >
-        <img src="../../static/dashboard/public/image/IMG_20250423_233835_041 1.png" alt="Product" class="rounded mb-4 ">
-        <h2 class="font-semibold text-center mb-3 ">لورم ایپسوم</h2>
-        <p class="text-sm text-gray-600 text-center mb-3">توضیح یک خطی در مورد محصول</p>
-        <button class=" text-white py-2 px-3 rounded w-full cursor-default" style="background-color:#9AA6B2 " disabled>
-          در حال پردازش...
-        </button>
-      </div>
+  <!-- ستون چپ -->
+  <div class="w-full lg:w-1/2 p-4 border-b lg:border-b-0 border-gray-300">
+    <div class="text-gray-500 text-lg mb-1">نام خانوادگی:</div>
+    <div class="flex items-center justify-between">
+      <input type="text" value="حافظ" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
     </div>
-  </div>
-
-  <div id="delivered" class="tab-content hidden">
-    <p class="text-center text-gray-500">سفارشی تحویل داده نشده است.</p>
-  </div>
-
-  <div id="cancelled" class="tab-content hidden">
-    <p class="text-center text-gray-500">سفارشی لغو نشده است.</p>
-  </div>
-
-  <!-- دکمه پایین صفحه -->
-  <div class="mt-10 text-left" style="margin-bottom: 2%; margin-left: 3%;">
-    <button class="bg-Orange text-white py-2 px-6 rounded">
-      تایید و تکمیل سفارش
-    </button>
   </div>
 </div>
 
-  
+
+
+ <!-- ردیف ۱ -->
+<div class="flex flex-col lg:flex-row  border-gray-300">
+  <!-- ستون راست -->
+  <div class="w-full lg:w-1/2 p-4 border-b lg:border-b-0 border-gray-300">
+    <div class="text-gray-500 text-lg mb-1">شماره تلفن</div>
+    <div class="flex items-center justify-between">
+      <input type="number" value="" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ستون چپ -->
+  <div class="w-full lg:w-1/2 p-4 border-b lg:border-b-0 border-gray-300">
+    <div class="text-gray-500 text-lg mb-1">ایمیل</div>
+    <div class="flex items-center justify-between">
+      <input type="email" value="" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ردیف ۱ -->
+<div class="flex flex-col lg:flex-row lg:border-b-0 border-gray-300">
+  <!-- ستون راست -->
+  <div class="w-full lg:w-1/2 p-4 ">
+    <div class="text-gray-500 text-lg mb-1">رمز عبور</div>
+    <div class="flex items-center justify-between">
+      <input type="password" value="1234" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ستون چپ -->
+  <div class="w-full lg:w-1/2 p-4 ">
+    <div class="text-gray-500 text-lg mb-1">شغل</div>
+    <div class="flex items-center justify-between">
+      <input type="text" value="" readonly class="editable-input font-semibold text-lg px-1">
+      <button class="edit-btn p-2 rounded-full text-sm bg-gray-100">
+        <span class="icon-container inline-block w-5 h-5"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
 
 
 
@@ -286,19 +261,18 @@
 </div>
 
 
-
-
   </div>
-</div>
-
-
-
-
-      
+</div>     
   
 </main>
 </div>
-<script src="../../static/dashboard/js/script.js">
-</script>
-</body>
-</html>
+
+{% endblock content %}
+
+{% block footer_refrence %}
+  <script src="{% static 'dashboard/js/script.js' %}"> </script>
+{% endblock footer_refrence %}
+
+{% block title %}
+  فروشگاه هنرستان سعدی
+{% endblock title %}
