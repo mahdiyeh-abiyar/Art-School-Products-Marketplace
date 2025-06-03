@@ -15,15 +15,16 @@
     <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold mb-6 md:mb-6 text-darkgray text-center w-full">ثبت نام</h2>
     <p class="text-center text-gray-600 mb-6">با ثبت نام در سایت فروشگاه هنرستان سعدی، از خرید در سایت<br> بهره‌مند شوید.</p>
   
-    <form action="#" method="POST" class="w-full max-w-md p-8  border rounded-lg ">
+    <form action="" method="POST" class="w-full max-w-md p-8  border rounded-lg ">
+    {% csrf_token %}
       <div class="mb-4">
         <div class="flex items-center space-x-4 space-x-reverse justify-between bg-[#F2F4F8] px-12 py-3 rounded-xl">
           <label class="inline-flex items-center text-sm">
-            <input type="radio" name="account-type" value="artist" class="h-4 w-4">
+            <input type="radio" name="account-type" value="artist" class="h-4 w-4" checked>
             <span class="mr-2 text-darkgray text-xs">کارفرما</span>
           </label>
           <label class="inline-flex items-center text-sm">
-            <input type="radio" name="account-type" value="user" class="h-4 w-4" checked>
+            <input type="radio" name="account-type" value="user" class="h-4 w-4">
             <span class="mr-2 text-darkgray text-xs">هنرجو</span>
           </label>
         </div>
@@ -31,31 +32,61 @@
   
       <div class="mb-4 flex gap-4">
         <div class="w-1/2">
-          <label for="name" class="block text-xs font-medium text-darkgray mb-2">نام</label>
-          <input type="text" name="name" class="name w-full px-4 py-2 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-dark-teal bg-[#F2F4F8] shadow" placeholder="نام خود را وارد کنید...">
+          <label for="{{useregisterForm.firstname.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">نام</label>
+          {{ useregisterForm.firstname }}
+          {% for error in useregisterForm.firstname.errors  %}
+            <p>{{error}}</p>
+          {% endfor %}
           <span class="name-msg text-[0.65rem]"></span>
         </div>
   
         <div class="w-1/2">
-          <label for="lastname" class="block text-xs font-medium text-darkgray mb-2">نام خانوادگی</label>
-          <input type="text" name="lastname" class="lastname w-full px-4 py-2 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-dark-teal bg-[#F2F4F8] shadow" placeholder="نام خانوادگی خود را وارد کنید...">
+          <label for="{{useregisterForm.lastname.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">نام خانوادگی</label>
+          {{ useregisterForm.lastname }}
+          {% for error in useregisterForm.lastname.errors  %}
+            <p>{{error}}</p>
+          {% endfor %}
           <span class="lastname-msg text-[0.65rem]"></span>
         </div>
       </div>
   
       <div class="mb-4">
-        <label for="phone" class="block text-xs font-medium text-darkgray mb-2">شماره تلفن</label>
-        <input type="text"  name="phone" class="phone w-full px-4 py-2 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-dark-teal bg-[#F2F4F8] shadow" placeholder="--------0915">
-        <span class="phone-msg text-[0.65rem]"></span>
+        <label for="{{useregisterForm.username.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">نام کاربری</label>
+        {{ useregisterForm.username }}
+        {% for error in useregisterForm.username.errors  %}
+          <p>{{error}}</p>
+        {% endfor %}
+        <span class="username-msg text-[0.65rem]"></span>
+      </div>
+
+      <div class="mb-4">
+        <label for="{{useregisterForm.password.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">ایمیل</label>
+        {{ useregisterForm.email }}
+        {% for error in useregisterForm.email.errors  %}
+          <p>{{error}}</p>
+        {% endfor %}
+        <span class="email-msg text-[0.65rem]"></span>
       </div>
   
       <div class="mb-4">
-        <label for="password" class="block text-xs font-medium text-darkgray mb-2">رمز عبور</label>
-        <input type="password" id="password" name="password" class="password w-full px-4 py-2 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-dark-teal bg-[#F2F4F8] shadow" placeholder="رمز خود را وارد کنید...">
-        <p class="text-[0.65rem] text-[#9AA6B2] pt-3">رمز ورود شما باید شامل حداقل 8 کاراکتر، یک عدد و یک علامت(*، @، _) باشد.</p>
+        <label for="{{useregisterForm.password.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">رمز عبور</label>
+        {{ useregisterForm.password }}
+        {% for error in useregisterForm.password.errors  %}
+          <p>{{error}}</p>
+        {% endfor %}
         <span class="password-msg text-[0.65rem]"></span>
       </div>
   
+      <div class="mb-4">
+        <label for="{{useregisterForm.repassword.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">تکرار رمز عبور</label>
+        {{ useregisterForm.repassword }}
+        {% for error in useregisterForm.repassword.errors  %}
+          <p>{{error}}</p>
+        {% endfor %}
+        <p class="text-[0.65rem] text-[#9AA6B2] pt-3">رمز ورود شما باید شامل حداقل 8 کاراکتر، یک عدد و یک علامت(*، @، _) باشد.</p>
+        <span class="repassword-msg text-[0.65rem]"></span>
+      </div>
+
       <button type="submit" class="signin-btn w-full py-3 px-4 bg-dark-teal text-white font-semibold rounded-xl focus:outline-none focus:ring-2">
         ثبت نام
       </button>
@@ -66,6 +97,5 @@
       </p>
     </form>
     
-    <script src=" {% static 'registr/register.js' %} "></script>
   </body>
 </html>
