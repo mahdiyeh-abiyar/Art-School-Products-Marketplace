@@ -54,7 +54,7 @@
         <label for="{{useregisterForm.username.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">نام کاربری</label>
         {{ useregisterForm.username }}
         {% for error in useregisterForm.username.errors  %}
-          <p>{{error}}</p>
+          <p class="text-red-500 text-sm mt-1">{{error}}</p>
         {% endfor %}
         <span class="username-msg text-[0.65rem]"></span>
       </div>
@@ -63,7 +63,7 @@
         <label for="{{useregisterForm.password.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">ایمیل</label>
         {{ useregisterForm.email }}
         {% for error in useregisterForm.email.errors  %}
-          <p>{{error}}</p>
+          <p class="text-red-500 text-sm mt-1">{{error}}</p>
         {% endfor %}
         <span class="email-msg text-[0.65rem]"></span>
       </div>
@@ -71,9 +71,6 @@
       <div class="mb-4">
         <label for="{{useregisterForm.password.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">رمز عبور</label>
         {{ useregisterForm.password }}
-        {% for error in useregisterForm.password.errors  %}
-          <p>{{error}}</p>
-        {% endfor %}
         <span class="password-msg text-[0.65rem]"></span>
       </div>
   
@@ -81,7 +78,7 @@
         <label for="{{useregisterForm.repassword.id_for_label}}" class="block text-xs font-medium text-darkgray mb-2">تکرار رمز عبور</label>
         {{ useregisterForm.repassword }}
         {% for error in useregisterForm.repassword.errors  %}
-          <p>{{error}}</p>
+          <p class="text-red-500 text-sm mt-1">{{error}}</p>
         {% endfor %}
         <p class="text-[0.65rem] text-[#9AA6B2] pt-3">رمز ورود شما باید شامل حداقل 8 کاراکتر، یک عدد و یک علامت(*، @، _) باشد.</p>
         <span class="repassword-msg text-[0.65rem]"></span>

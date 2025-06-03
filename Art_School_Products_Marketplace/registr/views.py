@@ -5,7 +5,6 @@ from django.contrib.auth import login
 
 
 def registr_page(request):
-    print("POST received")
     if request.user.is_authenticated:
         return redirect('dashboard:dashboard_page')
     useregisterForm = registerForm()
