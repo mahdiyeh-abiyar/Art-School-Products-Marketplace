@@ -18,23 +18,29 @@
       </p>
     </div>
 
-    <form class="p-6 bg-white border-[1px] border-[#9AA6B2] rounded-lg">
+    <form class="p-6 bg-white border-[1px] border-[#9AA6B2] rounded-lg" method="POST" action="">
+      {% csrf_token %}
+
       <!-- ایمیل -->
       <div class="mb-4">
-        <label for="email" class="block text-sm font-medium text-[#3A3A3A] mb-2">ایمیل</label>
-        <input type="email" name="email"
-               class="phone w-full px-4 py-2 text-sm rounded-md focus:outline-none  bg-[#F2F4F8] shadow"
-               placeholder="example@gmail.com">
+        <label for="{{userloginForm.username.id_for_lable}}" class="block text-sm font-medium text-[#3A3A3A] mb-2">ایمیل</label>
+        {{ userloginForm.username }}
+        {% for error in userloginForm.username.errors  %}
+          <p>{{error}}</p>
+        {% endfor %}
+        
         <span class="phone-msg text-[0.65rem] text-red-500 mt-1 block"></span>
       </div>
 
       <!-- رمز عبور -->
       <div class="mb-4">
-        <label for="password" class="block text-sm font-medium text-[#3A3A3A] mb-2">رمز عبور</label>
+        <label for="{{userloginForm.password.id_for_lable}}" class="block text-sm font-medium text-[#3A3A3A] mb-2">رمز عبور</label>
         <div class="relative">
-          <input type="password" name="password" id="password"
-                 class="password w-full px-4 py-2 text-sm rounded-md focus:outline-none bg-[#F2F4F8] shadow"
-                 placeholder="رمز خود را وارد کنید...">
+          {{ userloginForm.password }}
+          {% for error in userloginForm.password.errors  %}
+            <p>{{error}}</p>
+          {% endfor %} 
+             
           <span onclick="togglePassword()" class="absolute left-3 top-2.5 cursor-pointer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.03589 12.322C1.96688 12.1146 1.96688 11.8904 2.03589 11.683C3.42289 7.51 7.35989 4.5 11.9999 4.5C16.6379 4.5 20.5729 7.507 21.9629 11.678C22.0329 11.885 22.0329 12.109 21.9629 12.317C20.5769 16.49 16.6399 19.5 11.9999 19.5C7.36189 19.5 3.42589 16.493 2.03589 12.322Z" stroke="#9AA6B2" stroke-linecap="round" stroke-linejoin="round"/>

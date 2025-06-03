@@ -105,7 +105,7 @@
     <!-- دکمه‌ها -->
 <div style="text-align: left;">
   <button id="cancel-btn" class="border-2 px-4 py-2 rounded-lg text-Orange font-semibold" style="border-color: #FE4F2D;">انصراف</button>
-  <button id="confirm-logout-btn" class="px-4 py-2 rounded-lg font-semibold bg-Orange text-white">خروج از حساب</button>
+  <a href="{% url "login:logout_page" %}"><button id="confirm-logout-btn" class="px-4 py-2 rounded-lg font-semibold bg-Orange text-white">خروج از حساب</button></a>
 </div>
 
 
@@ -137,7 +137,7 @@
         </svg>
       </button>
       <a href="#">
-        <span class="label hidden text-lg text-gray-700">حدیث حافظ</span>
+        <span class="label hidden text-lg text-gray-700">{{request.user}}</span>
       </a>
     </div>
   </div>
@@ -258,6 +258,6 @@
 {% endblock footer_refrence %}
 
 {% block title %}
-  فروشگاه هنرستان سعدی
+  پنل کاربری {{request.user}}
 {% endblock title %}
 
