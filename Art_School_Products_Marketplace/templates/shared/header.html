@@ -13,8 +13,8 @@
     
     {% if request.user.is_authenticated  %}
       <!-- login buttons -->
-      <a href="{% url "dashboard:dashboard_page" %}">
-        <div class="bg-teal rounded-3xl flex justify-center items-center p-2 gap-2">
+      <a href="{% url "dashboard:dashboard_page" %}" class="hidden md:block">
+        <div class="bg-teal rounded-full flex justify-center items-center p-2 gap-2">
             <div class="bg-light-gray rounded-full p-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#015551" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -51,6 +51,16 @@
     </ul>
     <div class="flex gap-4 pb-8">
       <a href="{% url "login:login_page" %}" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
-      <a href="{% url "registr:registr_page" %}" class="px-6 py-2 text-white bg-orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
+      <a href="{% url "registr:registr_page" %}" class="px-6 py-2 text-white bg-Orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
     </div>
+    <a href="{% url "dashboard:dashboard_page" %}" class="">
+      <div class="bg-Orange rounded-full flex justify-center items-center p-2 gap-2 mb-8">
+          <div class="bg-light-gray rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#015551" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>        
+          </div>
+          <h2 class="text-light-gray text-xl font-bold px-2"> {{request.user}} </h2>
+      </div>
+    </a>
   </div>

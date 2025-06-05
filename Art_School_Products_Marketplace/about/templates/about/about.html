@@ -4,7 +4,6 @@
 {% block head_ref %}
   <style>
     .course-box {
-      width: 325px;
       height: 438px;
       border: 0.5px solid #446878;
       border-radius: 12px;
@@ -15,8 +14,8 @@
 {% endblock head_ref %}
 
 {% block content %}
-    <section class="scroll-mt-24  flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-8">
-        <div class="md:w-1/2 flex justify-center items-center md:order-2 pt-32">
+    <section class="flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-8">
+        <div class="md:w-1/2 flex justify-center items-center md:order-2 pt-20">
           <img
             src="{% static "about/public/images/about.svg" %}"
             alt="فروشگاه سعدی"
@@ -43,11 +42,11 @@
     </section>
 
     <!-- باکس‌های رشته‌ها -->
-    <section class="mx-auto flex flex-col md:flex-row gap-6 justify-center items-center mt-24">
+    <section class="m-8 flex flex-col md:flex-row gap-6 justify-center items-center mt-24">
         
 
           <!-- باکس شبکه -->
-          <div class="course-box">
+          <div class="course-box md:w-[325px]">
             <img
               src="{% static "about/public/images/network.svg"%}"
               alt="شبکه و نرم‌افزار"
@@ -63,7 +62,7 @@
           </div>
 
           <!-- باکس فتوگرافیک -->
-          <div class="course-box">
+          <div class="course-box md:w-[325px]">
             <img
               src="{% static "about/public/images/photo.svg" %}"
               alt="فتوگرافیک"
@@ -76,7 +75,7 @@
           </div>
 
           <!-- باکس گرافیک -->
-          <div class="course-box">
+          <div class="course-box md:w-[325px]">
             <img
               src="{% static "about/public/images/graphic.svg" %}"
               alt="گرافیک"
