@@ -41,26 +41,31 @@
   <!-- Backdrop for Mobile Menu -->
   <div id="backdrop" class="fixed inset-0 w-full h-screen hidden bg-black/50 backdrop-blur-sm z-[997]"></div>
   
+
   <!-- Mobile Navigation Menu -->
   <div id="mobile-nav" class="md:hidden bg-dark-teal text-white flex flex-col items-center justify-center fixed w-full h-0 overflow-hidden bottom-0 duration-300 ease-in-out rounded-t-3xl left-0 z-[998]">
     <ul class="flex flex-col items-center gap-8 py-8 w-full">
       <li><a href="{% url "about:about_page" %}" class="text-xl hover:text-orange-200 transition">داستان ما</a></li>
       <li><a href="#" class="text-xl hover:text-orange-200 transition">تماس با ما</a></li>
       <li><a href="#" class="text-xl hover:text-orange-200 transition">سوالات متداول</a></li>
-      <li><a href="#" class="text-xl hover:text-orange-200 transition font-semibold"> فروشگاه </a></li>
+      <li><a href="{% url "products:products_page" %}" class="text-xl hover:text-orange-200 transition font-semibold"> فروشگاه </a></li>
     </ul>
-    <div class="flex gap-4 pb-8">
-      <a href="{% url "login:login_page" %}" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
-      <a href="{% url "registr:registr_page" %}" class="px-6 py-2 text-white bg-Orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
-    </div>
-    <a href="{% url "dashboard:dashboard_page" %}" class="">
-      <div class="bg-Orange rounded-full flex justify-center items-center p-2 gap-2 mb-8">
-          <div class="bg-light-gray rounded-full p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#015551" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>        
-          </div>
-          <h2 class="text-light-gray text-xl font-bold px-2"> {{request.user}} </h2>
+    {% if request.user.is_authenticated  %}
+      <a href="{% url "dashboard:dashboard_page" %}" class="">
+        <div class="bg-Orange rounded-full flex justify-center items-center p-2 gap-2 mb-8">
+            <div class="bg-light-gray rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#015551" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>        
+            </div>
+            <h2 class="text-light-gray text-xl font-bold px-2"> {{request.user}} </h2>
+        </div>
+      </a>
+    {% else %}
+      <div class="flex gap-4 pb-8">
+        <a href="{% url "login:login_page" %}" class="px-6 py-2 text-dark-teal bg-white rounded-lg hover:bg-gray-100 transition">ورود</a>
+        <a href="{% url "registr:registr_page" %}" class="px-6 py-2 text-white bg-Orange rounded-lg hover:bg-bright-orange transition">ثبت نام</a>
       </div>
-    </a>
+    {% endif %}
+
   </div>

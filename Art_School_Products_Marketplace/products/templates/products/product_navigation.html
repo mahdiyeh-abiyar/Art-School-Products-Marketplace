@@ -1,0 +1,42 @@
+
+<nav class="w-full bg-white text-sm md:p-8 md:gap-x-2">
+    <!-- نمایش در دسکتاپ -->
+    <div class="hidden md:flex items-center -mt-8">
+      <a href="#" class="px-4 py-8">دسته‌بندی کالا‌ها</a>
+      <span class="text-grayblue">|</span>
+      <a href="#digital" class="p-4">طراحی دیجیتال</a>
+      <span class="text-grayblue">|</span>
+      <a href="#paint" class="p-4">نقاشی و تصویرسازی</a>
+      <span class="text-grayblue">|</span>
+      <a href="#print" class="p-4">محصولات چاپی</a>
+      <span class="text-grayblue">|</span>
+      <a href="#web" class="p-4">طراحی وب سایت</a>
+    </div>
+    
+
+    <!-- نمایش در موبایل -->
+    <div id="mobileMenu" class="fixed inset-0 flex items-center justify-center hidden z-[999]">
+        <div id="backdrop" class="absolute inset-0 bg-[#3333337D] backdrop-blur-xs z-[998] w-screen"></div>
+        <div class="bg-white rounded-md max-w-md relative z-[999] container mx-auto p-2 overflow-hidden w-64">
+            <h3 class="flex justify-between border-b text-base p-4 items-center font-semibold text-darkgray">
+                دسته‌بندی کالاها
+                <svg id="closeButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#45474B" class="size-4">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>                  
+            </h3>                        
+            <ul class="divide-y divide-gray-200">
+                <li class="p-4 cursor-pointer text-darkgray border-b font-semibold">طراحی دیجیتال</li>
+                <li class="p-4 cursor-pointer text-darkgray border-b font-semibold">نقاشی و تصویرسازی</li>
+                <li class="p-4 cursor-pointer text-darkgray border-b font-semibold">محصولات چاپی</li>
+                <li class="p-4 cursor-pointer text-darkgray border-b font-semibold">طراحی وب‌سایت</li>
+                <li class="p-4 cursor-pointer text-darkgray font-semibold">عکاسی</li>
+            </ul>
+    </div>
+</nav>
+<button id="menuButton" class="text-darkgray bg-light-gray rounded-md flex text-sm gap-2 p-2 items-center md:hidden m-4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#45474B" class="size-6">
+        <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z" clip-rule="evenodd" />
+    </svg>          
+    دسته‌بندی کالا‌ها          
+</button>
+
