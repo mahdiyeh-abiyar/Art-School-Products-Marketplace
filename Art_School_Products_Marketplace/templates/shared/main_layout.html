@@ -18,8 +18,10 @@
     <!-- content section start -->
     {% block content %}{% endblock content %}
 
-    <!-- footer section start -->
-    {% include "shared/footer.html" %}
+    {% if not hide_footer %}
+        <!-- footer section start -->
+        {% include "shared/footer.html" %}
+    {% endif %}
 
    <!-- footer refrence section start -->
    {% block footer_refrence %}{% endblock footer_refrence %}
