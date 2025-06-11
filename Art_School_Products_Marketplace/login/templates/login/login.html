@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فرم ورود</title>
-  <link rel="stylesheet" href="{% static "home/styles/output.css" %} ">
-  <link rel="stylesheet" href="{% static "home/public/fonts/fontiran.css" %} ">
-  <script src="./script.js"></script>
+  <link rel="stylesheet" href="{% static "login/styles/style.css" %} ">
+  <link rel="stylesheet" href="{% static "login/public/fonts/fontiran.css" %} ">
+  <script src="{% static "login/js/script.js" %} "></script>
   <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body class="flex items-center justify-center min-h-screen px-4 bg-white">
@@ -28,7 +28,7 @@
         <label for="{{userloginForm.username.id_for_lable}}" class="block text-sm font-medium text-[#3A3A3A] mb-2">نام کاربری</label>
         {{ userloginForm.username }}
         {% for error in userloginForm.username.errors  %}
-          <p class="text-red-500 text-sm mt-1">{{error}}</p>
+          <p class="mt-1 text-sm text-red-500">{{error}}</p>
         {% endfor %}
         
         <span class="phone-msg text-[0.65rem] text-red-500 mt-1 block"></span>
@@ -40,7 +40,7 @@
         <div class="relative">
           {{ userloginForm.password }}
           {% for error in userloginForm.password.errors  %}
-            <p class="text-red-500 text-sm mt-1">{{error}}</p>
+            <p class="mt-1 text-sm text-red-500">{{error}}</p>
           {% endfor %} 
              
           <span onclick="togglePassword()" class="absolute left-3 top-2.5 cursor-pointer">

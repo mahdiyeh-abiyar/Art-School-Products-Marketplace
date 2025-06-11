@@ -1,3 +1,4 @@
+{%load static}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,15 +7,15 @@
   <title>شرایط و قوانین</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="webfont test.html">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static "Rules/styles/style.css" %} ">
 </head>
-<body class="bg-white text-right p-6">
+<body class="p-6 text-right bg-white">
 
-    <main class="max-w-3xl mx-auto px-4 py-10">
+    <main class="max-w-3xl px-4 py-10 mx-auto">
         <!-- عنوان -->
         <div class="mb-6">
-            <div class="relative mb-6 pr-10">
-                <div class="absolute top-0 right-0 w-6 h-6 text-gray-500 z-0">
+            <div class="relative pr-10 mb-6">
+                <div class="absolute top-0 right-0 z-0 w-6 h-6 text-gray-500">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.1875 2.795C11.1063 3.0575 11.0625 3.33625 11.0625 3.625C11.0625 4.1425 11.4825 4.5625 12 4.5625H17.625C17.8736 4.5625 18.1121 4.46373 18.2879 4.28791C18.4637 4.1121 18.5625 3.87364 18.5625 3.625C18.5626 3.34364 18.5204 3.06386 18.4375 2.795M11.1875 2.795C11.365 2.22087 11.7217 1.71867 12.2053 1.36192C12.6889 1.00518 13.2741 0.812641 13.875 0.8125H15.75C17.015 0.8125 18.0837 1.6475 18.4375 2.795M11.1875 2.795C10.7175 2.82375 10.25 2.8575 9.7825 2.895C8.36875 3.0125 7.3125 4.21625 7.3125 5.635V8.3125M18.4375 2.795C18.9075 2.82375 19.375 2.8575 19.8425 2.895C21.2563 3.0125 22.3125 4.21625 22.3125 5.635V18.625C22.3125 19.3709 22.0162 20.0863 21.4887 20.6137C20.9613 21.1412 20.2459 21.4375 19.5 21.4375H16.6875M7.3125 8.3125H3.09375C2.3175 8.3125 1.6875 8.9425 1.6875 9.71875V23.7812C1.6875 24.5575 2.3175 25.1875 3.09375 25.1875H15.2812C16.0575 25.1875 16.6875 24.5575 16.6875 23.7812V21.4375M7.3125 8.3125H15.2812C16.0575 8.3125 16.6875 8.9425 16.6875 9.71875V21.4375M6.375 17.6875L8.25 19.5625L12 14.875" stroke="#45474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
