@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فرم ورود</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{% static "login/styles/style.css" %} ">
-  <link rel="stylesheet" href="{% static "login/public/fonts/fontiran.css" %} ">
+  <link rel="stylesheet" href="{% static "login/public/fonts/woff/YekanBakhFaNum-Regular.woff" %} ">
   <script src="{% static "login/js/script.js" %} "></script>
-  <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body class="flex items-center justify-center min-h-screen px-4 bg-white">
 
@@ -23,7 +24,7 @@
     <form class="p-6 bg-white border rounded-lg" method="POST" action="">
       {% csrf_token %}
 
-      <!-- ایمیل -->
+      <!-- نام کاربری -->
       <div class="mb-4">
         <label for="{{userloginForm.username.id_for_lable}}" class="block text-sm font-medium text-[#3A3A3A] mb-2">نام کاربری</label>
         {{ userloginForm.username }}
