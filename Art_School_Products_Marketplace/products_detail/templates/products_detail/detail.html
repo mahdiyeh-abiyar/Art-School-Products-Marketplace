@@ -14,30 +14,14 @@
           style="height: 490px"
         >
           <img
-            src="./public/images/b.svg"
-            alt="تصویر ست اداری"
+            src="{{id.image.url}}"
+            alt="{{ id.title }}"
             class="object-contain mx-auto my-auto"
           />
         </div>
         <div class="flex gap-7 justify-center md:justify-start mt-6">
           <img
-            src="./public/images/b.svg"
-            class="w-14 h-14 border rounded cursor-pointer"
-          />
-          <img
-            src="./public/images/b.svg"
-            class="w-14 h-14 border rounded cursor-pointer"
-          />
-          <img
-            src="./public/images/b.svg"
-            class="w-14 h-14 border rounded cursor-pointer"
-          />
-          <img
-            src="./public/images/b.svg"
-            class="w-14 h-14 border rounded cursor-pointer"
-          />
-          <img
-            src="./public/images/b.svg"
+            src="../public/images/b.svg"
             class="w-14 h-14 border rounded cursor-pointer"
           />
         </div>
@@ -48,10 +32,8 @@
         style="height: 600px; width: 417px"
       >
         <div>
-          <nav class="text-xs text-teal font-semibold mb-2">
-            طراحی دیجیتال / طراحی ست اداری
-          </nav>
-          <h1 class="text-lg font-bold mt-6 text-darkgray">طراحی ست اداری</h1>
+          <nav class="text-xs text-teal font-semibold mb-2">{{ id.title }} / {{ id.category }}</nav>
+          <h1 class="text-lg font-bold mt-6 text-darkgray">{{ id.title }}</h1>
           <hr class="border-gray-300 mt-6" />
           <div class="flex gap-3 mt-6">
             <button
@@ -93,12 +75,8 @@
           <p
             class="leading-6 text-darkgray text-justify text-base mt-10 font-normal"
           >
-            اگر دوست دارین برای برند خودتون، هویت بصری خلق کنین، ما اینجاییم
-            تا با تمرکز بر خلاقیت و سادگی، یک ست اداری فوق‌العاده، شامل: اوراق
-            اداری، کارت ویزیت، اپلیکیشن موبایل، لوگو، کارت شناسایی، تقویم
-            رومیزی و آیتم‌های تبلیغاتی مثل لیوان، کلاه، تی‌شرت، رو براتون
-            طراحی و تولید کنیم؛و یه برند فوق‌العاده براتون بسازیم!
-          </p>
+        {{ id.description }}
+        </p>
         </div>
         <div class="">
           <h2 class="font-bold mb-4 text-darkgray text-base">ویژگی‌ها</h2>

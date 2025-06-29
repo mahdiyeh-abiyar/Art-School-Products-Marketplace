@@ -4,5 +4,5 @@ from .views import products_detail
 
 app_name = 'products_detail'
 urlpatterns = [
-    path('', products_detail, name='products_detail')
+    path('<int:pk>', products_detail, name='products_detail'),
 ]
