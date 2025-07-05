@@ -1,15 +1,7 @@
-{%load static}
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شرایط و قوانین</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="webfont test.html">
-  <link rel="stylesheet" href="{% static "Rules/styles/style.css" %} ">
-</head>
-<body class="p-6 text-right bg-white">
+{% extends "shared/main_layout.html" %}
+{% load static %}
+
+{% block content %}
 
     <main class="max-w-3xl px-4 py-10 mx-auto">
         <!-- عنوان -->
@@ -122,5 +114,8 @@
         </div>
     </main>
 
-</body>
-</html>
+{% endblock content %}
+
+{% block title %}
+    شرایط و قوانین 
+{% endblock title %}
